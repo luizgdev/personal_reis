@@ -5,75 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Reis</title>
+    <!-- Ícone do site -->
     <link rel="icon" type="image/png" href="/public/images/logo.png">
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="style.css">
+    <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oxanium:wght@200..800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outline&display=swap" rel="stylesheet">
+    <!-- Ícones -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body class="bg-[#1F1F1F] font-outline">
-    <header>
-        <nav class="text-white  flex justify-between items-center w-[92%] mx-auto mt-5 mb-5">
+<body class="bg-[#1A1A1A] font-outfit text-[16px]">
+    <header class="bg-[#1F1F1F]">
+        <nav
+            class="text-white flex justify-between items-center w-[92%] mx-auto border-t-[15px] border-b-[12px] border-[#1F1F1F]">
+            <!-- Logo e nome -->
             <div class="flex items-center gap-10">
-                <img class="max-h-16" src="/public/images/logo.png" alt="Rino_logo">
+                <img class="max-h-16" src="/public/images/logo.png" alt="Rino logo">
                 <h1 class="font-bold">Personal Reis</h1>
             </div>
-            <div>
 
-            </div>
+            <!-- Menu de navegação -->
             <div
                 class="nav-links duration-500 transition-all ease-in-out md:static absolute bg-[#1F1F1F] md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                    <li>
-                        <a class="opacity-50 hover:opacity-100" href="#">Home</a>
-                    </li>
-                    <li>
-                        <a class="opacity-50 hover:opacity-100" href="#">Sobre</a>
-                    </li>
-                    <li>
-                        <a class="opacity-50 hover:opacity-100" href="#">Modalidades</a>
-                    </li>
-                    <li>
-                        <a class="opacity-50 hover:opacity-100" href="#">Serviços</a>
-                    </li>
-                    <li>
-                        <a class="opacity-50 hover:opacity-100" href="#">Avaliações</a>
-                    </li>
-                    <li>
-                        <a class="opacity-50 hover:opacity-100" href="#">Perguntas Frequentes</a>
-                    </li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#">Home</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#">Sobre</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#">Modalidades</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#">Serviços</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#">Avaliações</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#">Perguntas Frequentes</a></li>
                 </ul>
             </div>
+
+            <!-- Botão e ícone de menu -->
             <div class="flex items-center gap-6">
                 <button class="bg-[#A50044] px-5 py-2 rounded-xl hover:bg-[#DB0030] font-bold">Junte-se ao
                     Time!</button>
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"
-                    alt="Menu"></ion-icon>
+                    title="Abrir menu"></ion-icon>
             </div>
         </nav>
     </header>
 
-    <div> <img src="./images/background.png" alt="background"></div>
+    <!-- Banner principal -->
+    <div class="relative flex flex-col justify-center items-start text-white px-4 sm:px-8 md:px-16 min-h-screen w-full">
+        <img src="./images/background.png" alt="background"
+            class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+        <h1 class="font-oxanium font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-[60%]">
+            TRANSFORME DESAFIOS EM VITÓRIAS!
+        </h1>
+        <h2 class="font-outfit opacity-70 mt-4 text-base sm:text-lg md:text-xl max-w-[50%]">
+            Como um personal trainer apaixonado, acredito em capacitar as pessoas a alcançarem seus objetivos de saúde
+            por meio de treinamentos personalizados e suporte.
+        </h2>
+        <button class="bg-[#A50044] px-5 py-3 mt-5 rounded-xl hover:bg-[#DB0030] font-bold">Junte-se ao Time!</button>
+    </div>
+
+    <!-- Sessão "Quem sou eu" -->
+    <div
+        class="flex flex-col md:flex-row items-center justify-center text-white gap-16 min-h-screen w-full px-8 md:px-16">
+        <!-- Vídeo -->
+        <div class="flex-shrink-0">
+            <div class="relative w-[320px] h-[180px] md:w-[560px] md:h-[315px]">
+                <iframe class="rounded-xl shadow-lg" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/_ZfC7MBtY0Q?si=FTdYjO-LzX2XyaIP" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-[90%] md:max-w-[60%]">
+            <h1 class="font-anton text-4xl md:text-5xl text-white">QUEM SOU EU?</h1>
+            <p class="font-outfit text-white opacity-70 mt-4 text-base md:text-lg max-w-[500px] leading-7">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
+                Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
+                mattis tellus. Nullam quis imperdiet augue.
+            </p>
+            <!-- Cards -->
+            <ul class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start text-center">
+                <li
+                    class="flex-1 bg-[#1F1F1F] text-white rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
+                    <h1 class="text-[#004D98] font-anton text-4xl">500+</h1>
+                    <p class="text-sm md:text-base mt-2 opacity-80">Rinos Satisfeitos</p>
+                </li>
+                <li
+                    class="flex-1 bg-[#1F1F1F] text-white rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
+                    <h1 class="text-[#004D98] font-anton text-4xl">10+</h1>
+                    <p class="text-sm md:text-base mt-2 opacity-80">Anos de Experiência</p>
+                </li>
+                <li
+                    class="flex-1 bg-[#1F1F1F] text-white rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
+                    <h1 class="text-[#004D98] font-anton text-4xl">1K+</h1>
+                    <p class="text-sm md:text-base mt-2 opacity-80">Treinos Realizados</p>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <script>
-        const navLinks = document.querySelector('.nav-links');
-        const header = document.querySelector('header');
-
+        // Função para alternar o menu de navegação
         function onToggleMenu(e) {
+            const navLinks = document.querySelector('.nav-links');
             const isMenuOpen = e.name === 'menu';
             e.name = isMenuOpen ? 'close' : 'menu';
-
-            if (isMenuOpen) {
-                const headerHeight = header.offsetHeight;
-                navLinks.style.top = `${headerHeight + 20}px`;
-            } else {
-                navLinks.style.top = '-100%';
-            }
+            navLinks.style.top = isMenuOpen ? `${document.querySelector('header').offsetHeight}px` : '-100%';
+            document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto'; // Evita scroll ao abrir o menu
         }
     </script>
 </body>
