@@ -32,8 +32,8 @@
 
             <!-- Menu de navegação -->
             <div
-                class="nav-links duration-500 transition-all ease-in-out md:static absolute bg-[#1F1F1F] md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                class="nav-links absolute z-50 top-[-100%] left-0 w-full bg-[#1F1F1F] transition-all duration-500 ease-in-out md:static md:flex md:w-auto md:min-h-fit md:top-0">
+                <ul class="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-8 py-4">
                     <li><a class="opacity-50 hover:opacity-100" href="#">Home</a></li>
                     <li><a class="opacity-50 hover:opacity-100" href="#">Sobre</a></li>
                     <li><a class="opacity-50 hover:opacity-100" href="#">Modalidades</a></li>
@@ -115,11 +115,15 @@
         // Função para alternar o menu de navegação
         function onToggleMenu(e) {
             const navLinks = document.querySelector('.nav-links');
+            const headerHeight = document.querySelector('header').offsetHeight; // Calcula a altura do header
             const isMenuOpen = e.name === 'menu';
+
             e.name = isMenuOpen ? 'close' : 'menu';
-            navLinks.style.top = isMenuOpen ? `${document.querySelector('header').offsetHeight}px` : '-100%';
+            navLinks.style.top = isMenuOpen ? `${headerHeight}px` : '-100%'; // Mostra/esconde o menu
+            navLinks.style.display = isMenuOpen ? 'block' : ''; // Garante que o menu apareça
             document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto'; // Evita scroll ao abrir o menu
         }
+
     </script>
 </body>
 
