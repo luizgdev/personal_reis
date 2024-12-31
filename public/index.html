@@ -148,8 +148,8 @@
     <!-- Seção de Programas de Treino -->
     <section class="text-white py-16">
         <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-anton shadow-md">PROGRAMAS DE TREINO</h1>
-            <h2 class=" opacity-50 text-2xl shadow-md">Escolha Seu Programa</h2>
+            <h1 class="text-4xl md:text-5xl font-anton">PROGRAMAS DE TREINO</h1>
+            <h2 class=" opacity-50 text-2xl">Escolha Seu Programa</h2>
         </div>
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
             <!-- Cartão 1 -->
@@ -185,61 +185,66 @@
         </div>
     </section>
 
-    <div class="relative w-full h-auto flex flex-col items-center justify-center px-4 py-16">
+    <section class="flex flex-col items-center justify-center mt-12 mb-12 relative">
         <!-- Gradiente de Fundo -->
-        <div class="absolute w-[80vw] max-w-[537px] aspect-square blur-[200px] bg-[#FF2332] opacity-15 top-40">
+        <div
+            class="absolute items-center justify-center w-[50%] sm:w-[30%] h-auto aspect-square blur-[200px] bg-[#FF2332] opacity-15 object-cover z-0">
         </div>
 
         <!-- Título -->
-        <h1 class="absolute top-4 md:top-0 text-center text-4xl md:text-5xl font-anton uppercase shadow-md">
+        <h1 class="text-center text-3xl sm:text-4xl md:text-5xl font-anton uppercase shadow-md z-10">
             Ainda tem dúvida? <br />
-            <span class="text-3xl md:text-4xl text-[#DB0030]">Deixe que os rinos te digam</span>
+            <span class="text-2xl sm:text-3xl md:text-4xl text-[#DB0030]">Deixe que os rinos te digam</span>
         </h1>
 
-        <!-- Seção do Slider -->
-        <div class="relative flex flex-col md:flex-row items-center justify-center w-full md:w-[80%] gap-10 mt-12">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 z-10 relative">
+
+            <!-- Botão Anterior -->
+            <button id="prev-btn" class="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] text-2xl sm:text-3xl">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+
             <!-- Seção da Citação -->
             <div id="quote-section"
-                class="flex flex-col justify-center items-start p-6 md:p-10 gap-6 md:gap-8 w-full md:w-[556px] h-auto md:h-[352px] bg-[#1F1F1F] rounded-3xl shadow-lg">
-                <p id="quote-text" class="text-[18px] md:text-[20px]">
+                class="flex flex-col justify-center items-start p-6 sm:p-8 md:p-10 gap-6 md:gap-8 w-full md:w-[40%] h-auto bg-[#1F1F1F] rounded-3xl shadow-lg z-10 relative">
+                <!-- Imagem no canto superior esquerdo -->
+                <img src="./images/aspas.png" alt="Imagem superior esquerda"
+                    class="absolute -top-5 -left-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px]" />
+
+                <p id="quote-text" class="text-[16px] sm:text-[18px] md:text-[20px]">
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
                     urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris."
                 </p>
                 <div>
-                    <span id="quote-author" class="opacity-50 md:text-[20px] font-light">Fulano de
-                        Tal</span>
+                    <span id="quote-author" class="opacity-50 md:text-[20px] font-light">Fulano de Tal</span>
                 </div>
             </div>
 
             <!-- Seção das Imagens -->
-            <div class="flex w-full md:w-[312px] h-[200px] md:h-[386px] overflow-hidden rounded-3xl">
-                <div id="slider" class="flex transition-transform duration-500">
-                    <img src="./images/logo.png" alt="Imagem 1" class="w-full h-full object-cover" />
-                    <img src="./images/logo.png" alt="Imagem 2" class="w-full h-full object-cover" />
-                    <img src="./images/logo.png" alt="Imagem 3" class="w-full h-full object-cover" />
-                </div>
+            <div class="flex w-full md:w-[20%] h-[200px] md:h-[50%] overflow-visible z-10 relative">
+                <!-- Imagem no canto inferior direito -->
+                <img src="./images/aspas.png" alt="Imagem inferior direita"
+                    class="absolute -bottom-5 -right-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px] z-20" />
+                <img id="slide-image" src="./images/logo.png" alt="Imagem 1"
+                    class="w-full h-full rounded-3xl object-cover" />
             </div>
 
-            <!-- Paginação -->
-            <div class="absolute md:bottom-[-5%] flex space-x-2 shadow-sm">
-                <div data-index="0" class="pagination-dot w-[10px] h-[10px] bg-[#DB0030] aspect-square"></div>
-                <div data-index="1" class="pagination-dot w-[10px] h-[10px] bg-[#909090] aspect-square"></div>
-                <div data-index="2" class="pagination-dot w-[10px] h-[10px] bg-[#909090] aspect-square"></div>
-            </div>
-
-            <!-- Botão Anterior -->
-            <button id="prev-btn"
-                class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-[48px] h-[48px] text-3xl">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </button>
             <!-- Botão Próximo -->
-            <button id="next-btn"
-                class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-[48px] h-[48px] text-3xl text-white rounded-full">
+            <button id="next-btn" class="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] text-2xl sm:text-3xl">
                 <ion-icon name="chevron-forward-outline"></ion-icon>
             </button>
         </div>
-    </div>
 
+        <!-- Paginação -->
+        <div class="flex space-x-2 shadow-sm z-10">
+            <div data-index="0"
+                class="pagination-dot w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] bg-[#DB0030] rounded-full"></div>
+            <div data-index="1"
+                class="pagination-dot w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] bg-[#909090] rounded-full"></div>
+            <div data-index="2"
+                class="pagination-dot w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] bg-[#909090] rounded-full"></div>
+        </div>
+    </section>
 
     <script>
         // Função para alternar o menu de navegação
@@ -264,7 +269,7 @@
                 author: "Fulano de Tal",
             },
             {
-                image: "./images/logo.png",
+                image: "./images/reis.jpg",
                 text: "“Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.”",
                 author: "Ciclano Silva",
             },
@@ -277,21 +282,21 @@
 
         let currentSlide = 0;
 
-        const slider = document.getElementById("slider");
         const quoteText = document.getElementById("quote-text");
         const quoteAuthor = document.getElementById("quote-author");
+        const slideImage = document.getElementById("slide-image");
 
         const prevBtn = document.getElementById("prev-btn");
         const nextBtn = document.getElementById("next-btn");
 
         const paginationDots = document.querySelectorAll(".pagination-dot");
 
-        // Atualiza o slide
+        // Atualiza o conteúdo da imagem e texto
         function updateSlide(index) {
             const { image, text, author } = slides[index];
-            slider.style.transform = `translateX(-${index * 100}%)`;
-            quoteText.textContent = text;
-            quoteAuthor.textContent = author;
+            slideImage.src = image;  // Atualiza a imagem
+            quoteText.textContent = text;  // Atualiza o texto
+            quoteAuthor.textContent = author;  // Atualiza o autor
 
             // Atualiza as cores dos pontos de paginação
             paginationDots.forEach((dot, i) => {
@@ -316,6 +321,9 @@
             currentSlide = (currentSlide + 1) % slides.length;
             updateSlide(currentSlide);
         });
+
+        // Inicializa o slide com o primeiro
+        updateSlide(currentSlide);
     </script>
 </body>
 
