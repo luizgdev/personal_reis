@@ -18,6 +18,7 @@
     <!-- Ícones -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-[#1A1A1A] font-outfit text-base text-white">
@@ -33,19 +34,21 @@
             <!-- Menu de navegação -->
             <div
                 class="nav-links absolute z-50 top-[-100%] left-0 w-full bg-[#1F1F1F] transition-all duration-500 ease-in-out md:static md:flex md:w-auto md:min-h-fit md:top-0">
-                <ul class="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-8 py-4">
-                    <li><a class="opacity-50 hover:opacity-100" href="#">Home</a></li>
-                    <li><a class="opacity-50 hover:opacity-100" href="#">Sobre</a></li>
-                    <li><a class="opacity-50 hover:opacity-100" href="#">Modalidades</a></li>
-                    <li><a class="opacity-50 hover:opacity-100" href="#">Serviços</a></li>
-                    <li><a class="opacity-50 hover:opacity-100" href="#">Avaliações</a></li>
-                    <li><a class="opacity-50 hover:opacity-100" href="#">Perguntas Frequentes</a></li>
+                <ul class="flex flex-col md:flex-row md:items-center md:gap-[3vw] gap-8 py-4">
+                    <li><a class="opacity-50 hover:opacity-100" href="#home">Home</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#sobre">Sobre</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#modalidades">Modalidades</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#preço">Serviços</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#reviews">Avaliações</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#perguntas">Perguntas Frequentes</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#contato">Contato</a></li>
                 </ul>
             </div>
 
             <!-- Botão e ícone de menu -->
             <div class="flex items-center gap-6">
-                <button class="bg-[#A50044] px-5 py-2 rounded-xl hover:bg-[#DB0030] font-bold">Junte-se ao
+                <button onclick="redirecionarWhatsApp()"
+                    class="bg-[#A50044] px-5 py-2 rounded-xl hover:bg-[#DB0030] font-bold">Junte-se ao
                     Time!</button>
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"
                     title="Abrir menu"></ion-icon>
@@ -54,7 +57,7 @@
     </header>
 
     <!-- Banner principal -->
-    <div class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 min-h-screen w-full">
+    <div id="home" class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 min-h-screen w-full">
         <img src="./images/background.png" alt="background"
             class="absolute top-0 left-0 w-full h-full object-cover -z-10">
         <h1 class="font-oxanium font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-[60%]">
@@ -64,11 +67,12 @@
             Como um personal trainer apaixonado, acredito em capacitar as pessoas a alcançarem seus objetivos de saúde
             por meio de treinamentos personalizados e suporte.
         </h2>
-        <button class="bg-[#A50044] px-5 py-3 mt-5 rounded-xl hover:bg-[#DB0030] font-bold">Junte-se ao Time!</button>
+        <button onclick="redirecionarWhatsApp()"
+            class="bg-[#A50044] px-5 py-3 mt-5 rounded-xl hover:bg-[#DB0030] font-bold">Junte-se ao Time!</button>
     </div>
 
     <!-- Sessão "Quem sou eu" -->
-    <div
+    <div id="sobre"
         class="flex flex-col md:flex-row items-center justify-center text-white gap-16 min-h-screen w-full px-8 md:px-16">
         <!-- Vídeo -->
         <div class="flex-shrink-0">
@@ -109,7 +113,8 @@
     </div>
 
     <!-- Sessão "Modalidades" -->
-    <div class="flex flex-col md:flex-row items-center justify-center  gap-16 min-h-screen w-full px-8 md:px-16">
+    <div id="modalidades"
+        class="flex flex-col md:flex-row items-center justify-center  gap-16 min-h-screen w-full px-8 md:px-16">
         <!-- Texto -->
         <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-[90%] md:max-w-[60%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">MODALIDADES</h1>
@@ -146,7 +151,7 @@
     </div>
 
     <!-- Seção de Programas de Treino -->
-    <section class="text-white py-16">
+    <section id="preço" class="text-white py-16">
         <div class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-anton">PROGRAMAS DE TREINO</h1>
             <h2 class=" opacity-50 text-2xl">Escolha Seu Programa</h2>
@@ -159,7 +164,8 @@
                 <p class="text-5xl font-anton my-4">200$</p>
                 <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
                 <p class="text-sm opacity-70 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
+                <button onclick="redirecionarWhatsApp()"
+                    class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
                     Time!</button>
             </div>
             <!-- Cartão 2 -->
@@ -169,7 +175,8 @@
                 <p class="text-5xl font-anton my-4">300$</p>
                 <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
                 <p class="text-sm opacity-70 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
+                <button onclick="redirecionarWhatsApp()"
+                    class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
                     Time!</button>
             </div>
             <!-- Cartão 3 -->
@@ -179,13 +186,14 @@
                 <p class="text-5xl font-anton my-4">100$</p>
                 <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
                 <p class="text-sm opacity-70 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
+                <button onclick="redirecionarWhatsApp()"
+                    class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
                     Time!</button>
             </div>
         </div>
     </section>
 
-    <section class="flex flex-col items-center justify-center mt-12 mb-12 relative">
+    <section id="reviews" class="flex flex-col items-center justify-center mt-12 mb-12 relative">
         <!-- Gradiente de Fundo -->
         <div
             class="absolute items-center justify-center w-[50%] sm:w-[30%] h-auto aspect-square blur-[150px] bg-[#FF2332] opacity-15 object-cover z-0">
@@ -246,7 +254,7 @@
         </div>
     </section>
 
-    <section class="py-12 px-4">
+    <section id="perguntas" class="py-12 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <!-- Título -->
             <h1 class="text-4xl md:text-5xl font-anton uppercase">Perguntas Frequentes</h1>
@@ -321,7 +329,7 @@
         </div>
     </section>
 
-    <section class="flex flex-col md:flex-row items-center justify-center mt-10">
+    <section id="contato" class="flex flex-col md:flex-row items-center justify-center mt-16 mb-52">
         <!-- Imagem -->
         <div class="w-full md:w-[20%] flex justify-center">
             <img src="./images/logo.png" alt="provisoria" class="w-[70%] md:w-full max-w-[300px] object-contain">
@@ -342,13 +350,66 @@
                 para meu WhatsApp!
             </p>
             <div class="flex justify-center md:justify-start">
-                <button
+                <button onclick="redirecionarWhatsApp()"
                     class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold">
                     Junte-se ao Time!
                 </button>
             </div>
         </div>
     </section>
+
+    <footer class="py-10 px-24">
+        <div class="container mx-auto justify-items-center grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Seção 1: Sobre -->
+            <div>
+                <h2 class="text-lg font-bold mb-4">Personal Reis</h2>
+                <p class="text-sm text-gray-400 mb-4">
+                    Lorem ipsum dolor sit amet consectetur. Ut a mattis eget augue vivamus parturient eu aliquet.
+                    In laoreet risus ut nulla interdum urna sollicitudin. Nisi viverra in id ultricies.
+                </p>
+                <div class="flex items-center gap-4">
+                    <!-- Ícones sociais -->
+                    <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Seção 2: Links rápidos -->
+            <div>
+                <h2 class="text-lg font-bold mb-4">Links Rápidos</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a class="opacity-50 hover:opacity-100" href="#home">Home</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#sobre">Sobre</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#modalidades">Modalidades</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#preço">Serviços</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#reviews">Avaliações</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#perguntas">Perguntas Frequentes</a></li>
+                    <li><a class="opacity-50 hover:opacity-100" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <!-- Seção 3: Contato -->
+            <div>
+                <h2 class="text-lg font-bold mb-4">Contato</h2>
+                <ul class="text-sm space-y-2">
+                    <li class="opacity-50">Lorem Ipsum 22, LP19204</li>
+                    <li class="opacity-50">+55 (61) 9 9999-9999</li>
+                    <li><a href="mailto:personalreis@email.com" class="hover:opacity-70">personalreis@email.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Linha divisória -->
+        <div class="border-t border-gray-800 mt-8 pt-4 text-center text-sm text-gray-500">
+            © 2024. All rights reserved.
+        </div>
+    </footer>
+
 
     <script>
         // Função para alternar o menu de navegação
@@ -465,6 +526,14 @@
                 icon.textContent = index === 0 ? "-" : "+"; // Primeiro com "-" e os outros com "+"
             });
         };
+    </script>
+    <script>
+        function redirecionarWhatsApp() {
+            const numero = '5561996022463'; // Substitua pelo número de WhatsApp (incluindo o código do país e DDD)
+            const mensagem = 'Olá, gostaria de mais informações!'; // Mensagem padrão
+            const url = `whatsapp://send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
     </script>
 </body>
 
