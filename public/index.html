@@ -236,13 +236,88 @@
         </div>
 
         <!-- Paginação -->
-        <div class="flex space-x-2 shadow-sm z-10">
+        <div class="flex space-x-2 shadow-sm z-10 mt-8">
             <div data-index="0"
                 class="pagination-dot w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] bg-[#DB0030] rounded-full"></div>
             <div data-index="1"
                 class="pagination-dot w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] bg-[#909090] rounded-full"></div>
             <div data-index="2"
                 class="pagination-dot w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] bg-[#909090] rounded-full"></div>
+        </div>
+    </section>
+
+    <section class="py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Título -->
+            <h1 class="text-4xl md:text-5xl font-anton uppercase">Perguntas Frequentes</h1>
+            <h2 class="text-2xl mt-2 opacity-50">Estou aqui para ajudar!</h2>
+        </div>
+
+        <!-- Container de FAQ -->
+        <div class="mt-8 max-w-4xl mx-auto space-y-4">
+            <!-- Item 1 -->
+            <div class="border-b border-gray-700">
+                <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
+                    onclick="toggleFaq(0)">
+                    <span class="text-lg font-anton">Como Funciona o Acompanhamento?</span>
+                    <span id="icon-0" class="text-[#DB0030] text-xl">-</span>
+                </button>
+                <div id="faq-0" class="opacity-70 text-sm leading-relaxed">
+                    <p class="mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
+                        urna.
+                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="border-b border-gray-700">
+                <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
+                    onclick="toggleFaq(1)">
+                    <span class="text-lg font-anton">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span id="icon-1" class="text-[#DB0030] text-xl">-</span>
+                </button>
+                <div id="faq-1" class="opacity-70 text-sm leading-relaxed">
+                    <p class="mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
+                        urna.
+                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="border-b border-gray-700">
+                <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
+                    onclick="toggleFaq(2)">
+                    <span class="text-lg font-anton">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span id="icon-2" class="text-[#DB0030] text-xl">-</span>
+                </button>
+                <div id="faq-2" class="opacity-70 text-sm leading-relaxed">
+                    <p class="mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
+                        urna.
+                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="border-b border-gray-700">
+                <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
+                    onclick="toggleFaq(3)">
+                    <span class="text-lg font-anton">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span id="icon-3" class="text-[#DB0030] text-xl">-</span>
+                </button>
+                <div id="faq-3" class="opacity-70 text-sm leading-relaxed">
+                    <p class="mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
+                        urna.
+                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -324,6 +399,43 @@
 
         // Inicializa o slide com o primeiro
         updateSlide(currentSlide);
+    </script>
+
+    <script>
+        // Alternar visibilidade da FAQ
+        function toggleFaq(index) {
+            const faqContent = document.getElementById(`faq-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+
+            // Verificar se está visível
+            if (faqContent.classList.contains("hidden")) {
+                faqContent.classList.remove("hidden");
+                icon.textContent = "-"; // Altera para o ícone de menos
+            } else {
+                faqContent.classList.add("hidden");
+                icon.textContent = "+"; // Altera para o ícone de mais
+            }
+        }
+
+        // Configuração inicial ao carregar a página
+        window.onload = function () {
+            const faqs = document.querySelectorAll('[id^="faq-"]');
+            const icons = document.querySelectorAll('[id^="icon-"]');
+
+            // Configurar a primeira como aberta e as demais fechadas
+            faqs.forEach((faq, index) => {
+                if (index === 0) {
+                    faq.classList.remove("hidden"); // Mantém a primeira aberta
+                } else {
+                    faq.classList.add("hidden"); // Fecha as demais
+                }
+            });
+
+            // Ajustar os ícones correspondentes
+            icons.forEach((icon, index) => {
+                icon.textContent = index === 0 ? "-" : "+"; // Primeiro com "-" e os outros com "+"
+            });
+        };
     </script>
 </body>
 
