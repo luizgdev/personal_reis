@@ -24,17 +24,17 @@
 <body class="bg-[#1A1A1A] font-outfit text-base text-white">
     <header class="bg-[#1F1F1F]">
         <nav
-            class="text-white flex justify-between items-center w-[92%] mx-auto border-t-[15px] border-b-[12px] border-[#1F1F1F]">
+            class="text-white flex justify-between gap-3 sm:gap-6 items-center w-[92%] mx-auto border-t-[15px] border-b-[12px] border-[#1F1F1F]">
             <!-- Logo e nome -->
-            <div class="flex items-center gap-10">
-                <img class="max-h-16" src="/public/images/logo.png" alt="Rino logo">
-                <h1 class="font-bold">Personal Reis</h1>
+            <div class="flex items-center gap-3 sm:gap-6">
+                <img class="max-h-16" src="/public/images/logo.png" alt="Rino Logo">
+                <h1 class="font-bold text-center">Personal Reis</h1>
             </div>
 
             <!-- Menu de navegação -->
             <div
                 class="nav-links absolute z-50 top-[-100%] left-0 w-full bg-[#1F1F1F] transition-all duration-500 ease-in-out md:static md:flex md:w-auto md:min-h-fit md:top-0">
-                <ul class="flex flex-col md:flex-row md:items-center md:gap-[3vw] gap-8 py-4">
+                <ul class="flex flex-col md:flex-row md:items-center md:gap-[3vw] gap-8 py-4 ml-4 sm:ml-0">
                     <li><a class="opacity-50 hover:opacity-100" href="#home">Home</a></li>
                     <li><a class="opacity-50 hover:opacity-100" href="#sobre">Sobre</a></li>
                     <li><a class="opacity-50 hover:opacity-100" href="#modalidades">Modalidades</a></li>
@@ -48,7 +48,7 @@
             <!-- Botão e ícone de menu -->
             <div class="flex items-center gap-6">
                 <button onclick="redirecionarWhatsApp()"
-                    class="bg-[#A50044] px-5 py-2 rounded-xl hover:bg-[#DB0030] font-bold">Junte-se ao
+                    class="bg-[#A50044] hover:bg-[#DB0030] text-sm px-2 sm:px-5 py-2 rounded-xl font-bold">Junte-se ao
                     Time!</button>
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"
                     title="Abrir menu"></ion-icon>
@@ -57,19 +57,20 @@
     </header>
 
     <!-- Banner principal -->
-    <div id="home" class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 min-h-screen w-full">
-        <img src="./images/background.png" alt="background"
-            class="absolute top-0 left-0 w-full h-full object-cover -z-10">
-        <h1 class="font-oxanium font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-[60%]">
+    <section id="home" class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 mb-6 sm:mb-52">
+        <img src="./images/background.png" alt="background" class="absolute top-0 left-0 object-cover -z-10">
+        <h1
+            class="font-oxanium font-extrabold text-base mt-8 sm:mt-52 sm:text-5xl md:text-6xl lg:text-7xl max-w-[60%] z-10">
             TRANSFORME DESAFIOS EM VITÓRIAS!
         </h1>
-        <h2 class="font-outfit opacity-70 mt-4 text-base sm:text-lg md:text-xl max-w-[50%]">
+        <h2 class="font-outfit opacity-70 mt-1 sm:mt-4 text-xs sm:text-xl md:text-2xl max-w-[50%]">
             Como um personal trainer apaixonado, acredito em capacitar as pessoas a alcançarem seus objetivos de saúde
             por meio de treinamentos personalizados e suporte.
         </h2>
         <button onclick="redirecionarWhatsApp()"
-            class="bg-[#A50044] px-5 py-3 mt-5 rounded-xl hover:bg-[#DB0030] font-bold">Junte-se ao Time!</button>
-    </div>
+            class="bg-[#A50044] px-3 sm:px-5 py-3 mt-2 sm:mt-5 sm:text-base rounded-xl hover:bg-[#DB0030] text-xs font-bold">Junte-se
+            ao Time!</button>
+    </section>
 
     <!-- Sessão "Quem sou eu" -->
     <div id="sobre"
