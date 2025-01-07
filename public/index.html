@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Reis</title>
     <!-- Ícone do site -->
-    <link rel="icon" type="image/png" href="/public/images/logo.png">
+    <link rel="icon" type="image/png" href="/images/logo.png">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="style.css">
     <!-- Fontes do Google -->
@@ -60,24 +60,23 @@
     <section id="home" class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 mb-6 sm:mb-52">
         <img src="./images/background.png" alt="background" class="absolute top-0 left-0 object-cover -z-10">
         <h1
-            class="font-oxanium font-extrabold text-base mt-8 sm:mt-52 sm:text-5xl md:text-6xl lg:text-7xl max-w-[60%] z-10">
+            class="font-oxanium font-extrabold text-2xl mt-10 text-center -ml-4 sm:mt-52 sm:text-5xl md:text-6xl lg:text-7xl max-w-[60%] z-10">
             TRANSFORME DESAFIOS EM VITÓRIAS!
         </h1>
-        <h2 class="font-outfit opacity-70 mt-1 sm:mt-4 text-xs sm:text-xl md:text-2xl max-w-[50%]">
+        <h2 class="font-outfit opacity-70 sm:mt-4 text-xs sm:text-xl md:text-2xl max-w-40 ml-3 text-justify">
             Como um personal trainer apaixonado, acredito em capacitar as pessoas a alcançarem seus objetivos de saúde
             por meio de treinamentos personalizados e suporte.
         </h2>
         <button onclick="redirecionarWhatsApp()"
-            class="bg-[#A50044] px-3 sm:px-5 py-3 mt-2 sm:mt-5 sm:text-base rounded-xl hover:bg-[#DB0030] text-xs font-bold">Junte-se
+            class="bg-[#A50044] px-3 sm:px-5 py-3 mt-2 sm:mt-5 sm:text-base rounded-xl hover:bg-[#DB0030] text-xs font-bold hidden sm:block">Junte-se
             ao Time!</button>
     </section>
 
     <!-- Sessão "Quem sou eu" -->
-    <div id="sobre"
-        class="flex flex-col md:flex-row items-center justify-center text-white gap-16 min-h-screen w-full px-8 md:px-16">
+    <section id="sobre" class="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 w-full px-8 md:px-16">
         <!-- Vídeo -->
         <div class="flex-shrink-0">
-            <div class="relative w-[320px] h-[180px] md:w-[560px] md:h-[315px]">
+            <div class="relative w-[288px] h-[162px] md:w-[560px] md:h-[315px]">
                 <iframe class="rounded-xl shadow-lg" width="100%" height="100%"
                     src="https://www.youtube.com/embed/_ZfC7MBtY0Q?si=FTdYjO-LzX2XyaIP" title="YouTube video player"
                     frameborder="0"
@@ -88,45 +87,45 @@
         </div>
 
         <!-- Texto -->
-        <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-[90%] md:max-w-[60%]">
+        <div class="flex flex-col items-center md:items-start text-justify md:text-left max-w-[90%] md:max-w-[60%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">QUEM SOU EU?</h1>
-            <p class="opacity-70 mt-4 md:text-lg max-w-[500px] leading-7">
+            <p class="opacity-70 mt-4 md:text-lg max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
                 Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
                 mattis tellus. Nullam quis imperdiet augue.
             </p>
             <!-- Cards -->
-            <ul class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start text-center">
+            <ul class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start text-center">
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-4xl">500+</h1>
-                    <p class="text-sm md:text-base mt-2 opacity-80">Rinos Satisfeitos</p>
+                    <h1 class="text-[#004D98] font-anton text-3xl">500+</h1>
+                    <p class="text-xs md:text-base mt-1 opacity-80">Rinos Satisfeitos</p>
                 </li>
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-4xl">10+</h1>
-                    <p class="text-sm md:text-base mt-2 opacity-80">Anos de Experiência</p>
+                    <h1 class="text-[#004D98] font-anton text-3xl">10+</h1>
+                    <p class="text-xs md:text-base mt-1 opacity-80">Anos de Experiência</p>
                 </li>
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-4xl">1K+</h1>
-                    <p class="text-sm md:text-base mt-2 opacity-80">Treinos Realizados</p>
+                    <h1 class="text-[#004D98] font-anton text-3xl">1K+</h1>
+                    <p class="text-xs md:text-base mt-1 opacity-80">Treinos Realizados</p>
                 </li>
             </ul>
         </div>
-    </div>
+    </section>
 
     <!-- Sessão "Modalidades" -->
-    <div id="modalidades"
-        class="flex flex-col md:flex-row items-center justify-center  gap-16 min-h-screen w-full px-8 md:px-16">
+    <section id="modalidades"
+        class="flex flex-col md:flex-row items-center justify-center mt-12 gap-6 w-full px-8 md:px-16">
         <!-- Texto -->
-        <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-[90%] md:max-w-[60%]">
+        <div class="flex flex-col items-center md:items-start text-justify md:text-left max-w-[90%] md:max-w-[60%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">MODALIDADES</h1>
-            <p class=" opacity-70 mt-4 text-base md:text-lg max-w-[500px] leading-7">
+            <p class=" opacity-70 mt-4 text-base md:text-lg max-w-[500px] mx-auto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
                 Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
                 mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum
                 eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet.
             </p>
             <!-- Cards -->
-            <ul class="mt-4 flex flex-wrap gap-4 justify-center md:justify-start text-center max-w-[500px]">
+            <ul class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start text-center max-w-[500px]">
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
                     <h1 class="text-[#EDBA00] font-anton text-2xl">HIPERTROFIA</h1>
                 </li>
@@ -144,49 +143,52 @@
 
         <!-- Imagem -->
         <div class="flex-shrink-0 flex items-center justify-center">
-            <div class="relative w-[320px] h-[180px] md:w-[560px] md:h-[315px]">
+            <div class="relative w-[85%] h-full md:w-[560px] md:h-[315px]">
                 <img class="rounded-xl shadow-lg w-full h-full object-cover" src="./images/reis.jpg"
                     alt="Imagem ilustrativa" />
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Seção de Programas de Treino -->
-    <section id="preço" class="text-white py-16">
-        <div class="text-center mb-12">
+    <section id="preço" class="my-12">
+        <div class="text-center mb-6">
             <h1 class="text-4xl md:text-5xl font-anton">PROGRAMAS DE TREINO</h1>
-            <h2 class=" opacity-50 text-2xl">Escolha Seu Programa</h2>
+            <h2 class=" opacity-50 text-xl">Escolha Seu Programa</h2>
         </div>
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
             <!-- Cartão 1 -->
             <div
-                class="bg-[#1F1F1F] max-w-[80%] hover:scale-110 transition-transform duration-300 p-8 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
+                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-transform duration-300 p-12 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
                 <h3 class="text-lg">Personal Trainings</h3>
                 <p class="text-5xl font-anton my-4">200$</p>
                 <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
-                <p class="text-sm opacity-70 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="text-sm opacity-70 mb-6 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
                 <button onclick="redirecionarWhatsApp()"
                     class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
                     Time!</button>
             </div>
             <!-- Cartão 2 -->
             <div
-                class="bg-[#1F1F1F] max-w-[80%] hover:scale-110 transition-transform duration-300 p-8 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
-                <h3 class="text-lg">Personal Trainings + Diet</h3>
+                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-transform duration-300 p-12 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
+                <h3 class="text-lg text-center">Personal Trainings + Diet</h3>
                 <p class="text-5xl font-anton my-4">300$</p>
                 <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
-                <p class="text-sm opacity-70 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="text-sm opacity-70 mb-6 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
                 <button onclick="redirecionarWhatsApp()"
                     class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
                     Time!</button>
             </div>
             <!-- Cartão 3 -->
             <div
-                class="bg-[#1F1F1F] max-w-[80%] hover:scale-110 transition-transform duration-300 p-8 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
+                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-transform duration-300 p-12 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
                 <h3 class="text-lg">Diet</h3>
                 <p class="text-5xl font-anton my-4">100$</p>
                 <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
-                <p class="text-sm opacity-70 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="text-sm opacity-70 mb-6 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
                 <button onclick="redirecionarWhatsApp()"
                     class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
                     Time!</button>
@@ -194,52 +196,51 @@
         </div>
     </section>
 
-    <section id="reviews" class="flex flex-col items-center justify-center mt-12 mb-12 relative">
+    <section id="reviews" class="flex flex-col items-center justify-center my-12 relative">
         <!-- Gradiente de Fundo -->
         <div
-            class="absolute items-center justify-center w-[50%] sm:w-[30%] h-auto aspect-square blur-[150px] bg-[#FF2332] opacity-15 object-cover z-0">
+            class="absolute items-center justify-center w-[50%] sm:w-[30%] h-auto aspect-square blur-[150px] bg-[#FF2332] opacity-50 object-cover z-0">
         </div>
 
         <!-- Título -->
-        <h1 class="text-center text-3xl sm:text-4xl md:text-5xl font-anton uppercase shadow-md z-10">
+        <h1 class="text-center text-4xl sm:text-4xl md:text-5xl font-anton uppercase z-10">
             Ainda tem dúvida? <br />
             <span class="text-2xl sm:text-3xl md:text-4xl text-[#DB0030]">Deixe que os rinos te digam</span>
         </h1>
 
-        <div class="flex flex-col md:flex-row items-center justify-center gap-6 z-10 relative">
-
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-6 z-10 relative">
             <!-- Botão Anterior -->
-            <button id="prev-btn" class="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] text-2xl sm:text-3xl">
+            <button id="prev-btn" class="hidden sm:block sm:w-[48px] sm:h-[48px] text-2xl sm:text-3xl">
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </button>
 
-            <!-- Seção da Citação -->
-            <div id="quote-section"
-                class="flex flex-col justify-center items-start p-6 sm:p-8 md:p-10 gap-6 md:gap-8 w-full md:w-[40%] h-auto bg-[#1F1F1F] rounded-3xl shadow-lg z-10 relative">
-                <!-- Imagem no canto superior esquerdo -->
-                <img src="./images/aspas.png" alt="Imagem superior esquerda"
-                    class="absolute -top-5 -left-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px]" />
+            <!-- Área de Swipe -->
+            <div id="swipe-container" class="flex flex-col items-center gap-4 w-[85%] md:w-[60%]">
+                <!-- Seção de Texto e Imagem -->
+                <div id="swipe-content"
+                    class="flex flex-col md:flex-row justify-center items-center px-4 py-4 gap-4 bg-[#1F1F1F] rounded-3xl shadow-lg relative w-full">
+                    <!-- Texto -->
+                    <div id="quote-section" class="flex flex-col justify-center px-6 py-4 gap-2 w-full md:w-[60%]">
+                        <img src="./images/aspas.png" alt="Imagem superior esquerda"
+                            class="absolute -top-5 -left-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px]" />
+                        <p id="quote-text" class="text-justify sm:text-[18px] md:text-[20px]">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi."
+                        </p>
+                        <span id="quote-author" class="opacity-50 md:text-[20px] font-light">Fulano de Tal</span>
+                    </div>
 
-                <p id="quote-text" class="text-[16px] sm:text-[18px] md:text-[20px]">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                    urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris."
-                </p>
-                <div>
-                    <span id="quote-author" class="opacity-50 md:text-[20px] font-light">Fulano de Tal</span>
+                    <!-- Imagem -->
+                    <div id="quote" class="flex w-full md:w-[40%] overflow-visible relative">
+                        <img src="./images/aspas.png" alt="Imagem inferior direita"
+                            class="absolute -bottom-5 -right-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px] z-20" />
+                        <img id="slide-image" src="./images/logo.png" alt="Imagem 1"
+                            class="w-full h-full rounded-3xl shadow-lg object-cover" />
+                    </div>
                 </div>
             </div>
 
-            <!-- Seção das Imagens -->
-            <div class="flex w-full md:w-[20%] h-[200px] md:h-[50%] overflow-visible z-10 relative">
-                <!-- Imagem no canto inferior direito -->
-                <img src="./images/aspas.png" alt="Imagem inferior direita"
-                    class="absolute -bottom-5 -right-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px] z-20" />
-                <img id="slide-image" src="./images/logo.png" alt="Imagem 1"
-                    class="w-full h-full rounded-3xl object-cover" />
-            </div>
-
             <!-- Botão Próximo -->
-            <button id="next-btn" class="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] text-2xl sm:text-3xl">
+            <button id="next-btn" class="hidden sm:block sm:w-[48px] sm:h-[48px] text-2xl sm:text-3xl">
                 <ion-icon name="chevron-forward-outline"></ion-icon>
             </button>
         </div>
@@ -255,23 +256,23 @@
         </div>
     </section>
 
-    <section id="perguntas" class="py-12 px-4">
+    <section id="perguntas" class="my-12 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <!-- Título -->
             <h1 class="text-4xl md:text-5xl font-anton uppercase">Perguntas Frequentes</h1>
-            <h2 class="text-2xl mt-2 opacity-50">Estou aqui para ajudar!</h2>
+            <h2 class="text-xl mt-2 opacity-50">Estou aqui para ajudar!</h2>
         </div>
 
         <!-- Container de FAQ -->
-        <div class="mt-8 max-w-4xl mx-auto space-y-4">
+        <div class="mt-6 px-4 max-w-4xl mx-auto space-y-4">
             <!-- Item 1 -->
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(0)">
-                    <span class="text-lg font-anton">Como Funciona o Acompanhamento?</span>
+                    <span class="font-anton">Como Funciona o Acompanhamento?</span>
                     <span id="icon-0" class="text-[#DB0030] text-xl">-</span>
                 </button>
-                <div id="faq-0" class="opacity-70 text-sm leading-relaxed">
+                <div id="faq-0" class="opacity-70 text-xs leading-relaxed">
                     <p class="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
                         urna.
@@ -284,10 +285,10 @@
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(1)">
-                    <span class="text-lg font-anton">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span class="font-anton">Lorem ipsum dolor sit amet consectetur?</span>
                     <span id="icon-1" class="text-[#DB0030] text-xl">-</span>
                 </button>
-                <div id="faq-1" class="opacity-70 text-sm leading-relaxed">
+                <div id="faq-1" class="opacity-70 text-xs leading-relaxed">
                     <p class="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
                         urna.
@@ -300,10 +301,10 @@
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(2)">
-                    <span class="text-lg font-anton">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span class="font-anton">Lorem ipsum dolor sit amet consectetur?</span>
                     <span id="icon-2" class="text-[#DB0030] text-xl">-</span>
                 </button>
-                <div id="faq-2" class="opacity-70 text-sm leading-relaxed">
+                <div id="faq-2" class="opacity-70 text-xs leading-relaxed">
                     <p class="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
                         urna.
@@ -316,10 +317,10 @@
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(3)">
-                    <span class="text-lg font-anton">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span class="font-anton">Lorem ipsum dolor sit amet consectetur?</span>
                     <span id="icon-3" class="text-[#DB0030] text-xl">-</span>
                 </button>
-                <div id="faq-3" class="opacity-70 text-sm leading-relaxed">
+                <div id="faq-3" class="opacity-70 text-xs leading-relaxed">
                     <p class="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
                         urna.
@@ -330,9 +331,9 @@
         </div>
     </section>
 
-    <section id="contato" class="flex flex-col md:flex-row items-center justify-center mt-16 mb-52">
+    <section id="contato" class="flex flex-col md:flex-row items-center justify-center my-12">
         <!-- Imagem -->
-        <div class="w-full md:w-[20%] flex justify-center">
+        <div class="w-[80%] md:w-[20%] flex justify-center">
             <img src="./images/logo.png" alt="provisoria" class="w-[70%] md:w-full max-w-[300px] object-contain">
         </div>
 
@@ -346,7 +347,7 @@
             <h1 class="text-4xl md:text-5xl font-anton uppercase text-center md:text-left">
                 Quer alcançar seus objetivos?
             </h1>
-            <p class="opacity-70 text-center md:text-left">
+            <p class="opacity-70 px-6 text-center md:text-left">
                 Me chame em minhas redes sociais. Basta apertar o botão e você será redirecionado(a)
                 para meu WhatsApp!
             </p>
@@ -431,7 +432,7 @@
         const slides = [
             {
                 image: "./images/logo.png",
-                text: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.”",
+                text: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.”",
                 author: "Fulano de Tal",
             },
             {
@@ -447,49 +448,75 @@
         ];
 
         let currentSlide = 0;
-
         const quoteText = document.getElementById("quote-text");
         const quoteAuthor = document.getElementById("quote-author");
         const slideImage = document.getElementById("slide-image");
-
-        const prevBtn = document.getElementById("prev-btn");
-        const nextBtn = document.getElementById("next-btn");
-
         const paginationDots = document.querySelectorAll(".pagination-dot");
 
         // Atualiza o conteúdo da imagem e texto
         function updateSlide(index) {
             const { image, text, author } = slides[index];
-            slideImage.src = image;  // Atualiza a imagem
-            quoteText.textContent = text;  // Atualiza o texto
-            quoteAuthor.textContent = author;  // Atualiza o autor
+            slideImage.src = image;
+            quoteText.textContent = text;
+            quoteAuthor.textContent = author;
 
-            // Atualiza as cores dos pontos de paginação
             paginationDots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.add("bg-[#DB0030]");
-                    dot.classList.remove("bg-[#909090]");
-                } else {
-                    dot.classList.add("bg-[#909090]");
-                    dot.classList.remove("bg-[#DB0030]");
-                }
+                dot.classList.toggle("bg-[#DB0030]", i === index);
+                dot.classList.toggle("bg-[#909090]", i !== index);
             });
         }
 
-        // Navegação anterior
-        prevBtn.addEventListener("click", () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            updateSlide(currentSlide);
-        });
-
-        // Navegação próxima
-        nextBtn.addEventListener("click", () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateSlide(currentSlide);
-        });
-
         // Inicializa o slide com o primeiro
         updateSlide(currentSlide);
+
+        // Navega pelos slides
+        function navigateSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            updateSlide(currentSlide);
+        }
+
+        // Configuração dos botões de navegação
+        document.getElementById("prev-btn").addEventListener("click", () => navigateSlide(-1));
+        document.getElementById("next-btn").addEventListener("click", () => navigateSlide(1));
+
+        // Eventos de swipe
+        let startX = 0;
+        let isDragging = false;
+
+        function startDrag(e) {
+            isDragging = true;
+            startX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+        }
+
+        function dragMove(e) {
+            if (!isDragging) return;
+            const currentX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+            const diff = currentX - startX;
+
+            if (diff > 50) {
+                isDragging = false;
+                navigateSlide(-1); // Arraste para a direita
+            } else if (diff < -50) {
+                isDragging = false;
+                navigateSlide(1); // Arraste para a esquerda
+            }
+        }
+
+        function endDrag() {
+            isDragging = false;
+        }
+
+        // Área de swipe para toda a seção
+        const swipeContainer = document.getElementById("swipe-container");
+        swipeContainer.addEventListener("mousedown", startDrag);
+        swipeContainer.addEventListener("mousemove", dragMove);
+        swipeContainer.addEventListener("mouseup", endDrag);
+        swipeContainer.addEventListener("mouseleave", endDrag);
+
+        swipeContainer.addEventListener("touchstart", startDrag);
+        swipeContainer.addEventListener("touchmove", dragMove);
+        swipeContainer.addEventListener("touchend", endDrag);
+
     </script>
 
     <script>
