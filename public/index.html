@@ -24,7 +24,7 @@
 <body class="bg-[#1A1A1A] font-outfit text-base text-white">
     <header class="bg-[#1F1F1F]">
         <nav
-            class="text-white flex justify-between gap-3 sm:gap-6 items-center w-[92%] mx-auto border-t-[15px] border-b-[12px] border-[#1F1F1F]">
+            class="text-white xl:text-lg flex justify-between gap-3 sm:gap-6 items-center w-[92%] md:w-[95%] mx-auto border-t-[15px] border-b-[12px] border-[#1F1F1F]">
             <!-- Logo e nome -->
             <div class="flex items-center gap-3 sm:gap-6">
                 <img class="max-h-16" src="./images/logo.png" alt="Rino Logo">
@@ -34,7 +34,7 @@
             <!-- Menu de navegação -->
             <div
                 class="nav-links absolute z-50 top-[-100%] left-0 w-full bg-[#1F1F1F] transition-all duration-500 ease-in-out md:static md:flex md:w-auto md:min-h-fit md:top-0">
-                <ul class="flex flex-col md:flex-row md:items-center md:gap-[3vw] gap-8 py-4 ml-4 sm:ml-0">
+                <ul class="flex flex-col md:flex-row md:items-center gap-8 md:gap-3 xl:gap-8 py-4 ml-4 sm:ml-0">
                     <li><a class="opacity-50 hover:opacity-100" href="#home">Home</a></li>
                     <li><a class="opacity-50 hover:opacity-100" href="#sobre">Sobre</a></li>
                     <li><a class="opacity-50 hover:opacity-100" href="#modalidades">Modalidades</a></li>
@@ -48,7 +48,7 @@
             <!-- Botão e ícone de menu -->
             <div class="flex items-center gap-6">
                 <button onclick="redirecionarWhatsApp()"
-                    class="bg-[#A50044] hover:bg-[#DB0030] text-sm px-2 sm:px-5 py-2 rounded-xl font-bold">Junte-se ao
+                    class="bg-[#A50044] hover:bg-[#DB0030] text-sm xl:text-lg px-2 sm:px-5 md:hidden xl:block py-2 rounded-xl font-bold">Junte-se ao
                     Time!</button>
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"
                     title="Abrir menu"></ion-icon>
@@ -57,26 +57,26 @@
     </header>
 
     <!-- Banner principal -->
-    <section id="home" class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 mb-6 sm:mb-52">
-        <img src="./images/background.png" alt="background" class="absolute top-0 left-0 object-cover -z-10">
+    <section id="home" class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 xl:px-32 mb-6 xl:mb-56 2xl:m">
+        <img src="./images/background.png" alt="background" class="absolute top-0 left-0 object-cover -z-10 2xl:w-full">
         <h1
-            class="font-oxanium font-extrabold text-2xl mt-10 text-center -ml-4 sm:mt-52 sm:text-5xl md:text-6xl lg:text-7xl max-w-[60%] z-10">
+            class="font-oxanium font-extrabold text-2xl mt-10 md:mt-24 xl:mt-48 text-center -ml-[3.5%] xl:pr-14 sm:mt-52 sm:text-5xl md:text-5xl lg:text-7xl max-w-[60%] z-10">
             TRANSFORME DESAFIOS EM VITÓRIAS!
         </h1>
-        <h2 class="font-outfit opacity-70 sm:mt-4 text-xs sm:text-xl md:text-2xl max-w-40 ml-3 text-justify">
+        <h2 class="font-outfit opacity-70 sm:mt-4 text-xs sm:text-xl md:text-lg xl:text-2xl max-w-40 md:max-w-80 xl:max-w-md ml-3 text-justify">
             Como um personal trainer apaixonado, acredito em capacitar as pessoas a alcançarem seus objetivos de saúde
             por meio de treinamentos personalizados e suporte.
         </h2>
         <button onclick="redirecionarWhatsApp()"
-            class="bg-[#A50044] px-3 sm:px-5 py-3 mt-2 sm:mt-5 sm:text-base rounded-xl hover:bg-[#DB0030] text-xs font-bold hidden sm:block">Junte-se
+            class="bg-[#A50044] ml-3 px-3 sm:px-5 py-3 xl:px-7 xl:py-5 xl:text-xl mt-2 sm:mt-5 sm:text-base rounded-xl hover:bg-[#DB0030] text-xs font-bold hidden sm:block">Junte-se
             ao Time!</button>
     </section>
 
     <!-- Sessão "Quem sou eu" -->
-    <section id="sobre" class="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 w-full px-8 md:px-16">
+    <section id="sobre" class="flex flex-col md:flex-row items-center justify-center gap-6 xl:gap-12 mt-12 w-full px-8 md:px-16">
         <!-- Vídeo -->
         <div class="flex-shrink-0">
-            <div class="relative w-[288px] h-[162px] md:w-[560px] md:h-[315px]">
+            <div class="relative w-[288px] h-[162px] md:w-[336px] md:h-[189px] xl:w-[560px] xl:h-[315px]">
                 <iframe class="rounded-xl shadow-lg" width="100%" height="100%"
                     src="https://www.youtube.com/embed/_ZfC7MBtY0Q?si=FTdYjO-LzX2XyaIP" title="YouTube video player"
                     frameborder="0"
@@ -89,24 +89,24 @@
         <!-- Texto -->
         <div class="flex flex-col items-center md:items-start text-justify md:text-left max-w-[90%] md:max-w-[60%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">QUEM SOU EU?</h1>
-            <p class="opacity-70 mt-4 md:text-lg max-w-[500px] mx-auto">
+            <p class="opacity-70 mt-4 md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[92%] 2xl:xl:max-w-[70%] text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
                 Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
                 mattis tellus. Nullam quis imperdiet augue.
             </p>
             <!-- Cards -->
-            <ul class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start text-center">
+            <ul class="mt-6 flex flex-wrap gap-2 xl:gap-4 justify-center md:justify-start text-center">
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-3xl">500+</h1>
-                    <p class="text-xs md:text-base mt-1 opacity-80">Rinos Satisfeitos</p>
+                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">500+</h1>
+                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Rinos Satisfeitos</p>
                 </li>
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-3xl">10+</h1>
-                    <p class="text-xs md:text-base mt-1 opacity-80">Anos de Experiência</p>
+                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">10+</h1>
+                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Anos de Experiência</p>
                 </li>
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-3xl">1K+</h1>
-                    <p class="text-xs md:text-base mt-1 opacity-80">Treinos Realizados</p>
+                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">1K+</h1>
+                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Treinos Realizados</p>
                 </li>
             </ul>
         </div>
@@ -114,18 +114,18 @@
 
     <!-- Sessão "Modalidades" -->
     <section id="modalidades"
-        class="flex flex-col md:flex-row items-center justify-center mt-12 gap-6 w-full px-8 md:px-16">
+        class="flex flex-col md:flex-row items-center justify-center mt-12 xl:mt-24 gap-6 xl:gap-12 w-full px-8 md:px-16">
         <!-- Texto -->
         <div class="flex flex-col items-center md:items-start text-justify md:text-left max-w-[90%] md:max-w-[60%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">MODALIDADES</h1>
-            <p class=" opacity-70 mt-4 text-base md:text-lg max-w-[500px] mx-auto">
+            <p class=" opacity-70 mt-4 text-base md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[600px] text-justify mx-auto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
                 Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
                 mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum
                 eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet.
             </p>
             <!-- Cards -->
-            <ul class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start text-center max-w-[500px]">
+            <ul class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start text-center max-w-[500px] xl:max-w-[600px]">
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
                     <h1 class="text-[#EDBA00] font-anton text-2xl">HIPERTROFIA</h1>
                 </li>
@@ -143,7 +143,7 @@
 
         <!-- Imagem -->
         <div class="flex-shrink-0 flex items-center justify-center">
-            <div class="relative w-[85%] h-full md:w-[560px] md:h-[315px]">
+            <div class="relative w-[85%] h-full md:w-[336px]">
                 <img class="rounded-xl shadow-lg w-full h-full object-cover" src="./images/reis.jpg"
                     alt="Imagem ilustrativa" />
             </div>
@@ -151,15 +151,15 @@
     </section>
 
     <!-- Seção de Programas de Treino -->
-    <section id="preço" class="my-12">
+    <section id="preço" class="my-12 xl:my-24">
         <div class="text-center mb-6">
             <h1 class="text-4xl md:text-5xl font-anton">PROGRAMAS DE TREINO</h1>
             <h2 class=" opacity-50 text-xl">Escolha Seu Programa</h2>
         </div>
-        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
+        <div class="max-w-4xl md:max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 place-items-center">
             <!-- Cartão 1 -->
             <div
-                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-transform duration-300 p-12 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
+                class="bg-[#1F1F1F] max-w-[70%] md:max-w-[80%] hover:scale-110 transition-transform duration-300 p-12 md:p-6 md:min-h-[450px] rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
                 <h3 class="text-lg">Personal Trainings</h3>
                 <p class="text-5xl font-anton my-4">200$</p>
                 <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
@@ -171,7 +171,7 @@
             </div>
             <!-- Cartão 2 -->
             <div
-                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-transform duration-300 p-12 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
+                class="bg-[#1F1F1F] max-w-[70%] md:max-w-[80%] hover:scale-110 transition-transform duration-300 p-12 md:p-6 md:min-h-[450px] rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
                 <h3 class="text-lg text-center">Personal Trainings + Diet</h3>
                 <p class="text-5xl font-anton my-4">300$</p>
                 <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
@@ -183,7 +183,7 @@
             </div>
             <!-- Cartão 3 -->
             <div
-                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-transform duration-300 p-12 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
+                class="bg-[#1F1F1F] max-w-[70%] md:max-w-[80%] hover:scale-110 transition-transform duration-300 p-12 md:p-6 md:min-h-[450px] rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
                 <h3 class="text-lg">Diet</h3>
                 <p class="text-5xl font-anton my-4">100$</p>
                 <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
@@ -196,7 +196,7 @@
         </div>
     </section>
 
-    <section id="reviews" class="flex flex-col items-center justify-center my-12 relative">
+    <section id="reviews" class="flex flex-col items-center justify-center my-12 xl:my-24 relative">
         <!-- Gradiente de Fundo -->
         <div
             class="absolute items-center justify-center w-[50%] sm:w-[30%] h-auto aspect-square blur-[150px] bg-[#FF2332] opacity-50 object-cover z-0">
@@ -256,7 +256,7 @@
         </div>
     </section>
 
-    <section id="perguntas" class="my-12 px-4">
+    <section id="perguntas" class="my-12 xl:my-24 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <!-- Título -->
             <h1 class="text-4xl md:text-5xl font-anton uppercase">Perguntas Frequentes</h1>
@@ -331,7 +331,7 @@
         </div>
     </section>
 
-    <section id="contato" class="flex flex-col md:flex-row items-center justify-center my-12">
+    <section id="contato" class="flex flex-col md:flex-row items-center justify-center my-12 xl:my-24">
         <!-- Imagem -->
         <div class="w-[80%] md:w-[20%] flex justify-center">
             <img src="./images/logo.png" alt="provisoria" class="w-[70%] md:w-full max-w-[300px] object-contain">
@@ -341,13 +341,13 @@
         <div class="w-full md:w-[30%] space-y-4 relative">
             <!-- Background Blur -->
             <div
-                class="absolute inset-0 mx-auto w-[80%] h-[50%] aspect-square blur-[70px] bg-[#FF2332] opacity-20 -z-10">
+                class="absolute inset-0 mx-auto w-[80%] h-[50%] md:h-[70%] aspect-square blur-[70px] bg-[#FF2332] opacity-20 -z-10">
             </div>
 
             <h1 class="text-4xl md:text-5xl font-anton uppercase text-center md:text-left">
                 Quer alcançar seus objetivos?
             </h1>
-            <p class="opacity-70 px-6 text-center md:text-left">
+            <p class="opacity-70 px-6 md:px-0 text-center md:text-left">
                 Me chame em minhas redes sociais. Basta apertar o botão e você será redirecionado(a)
                 para meu WhatsApp!
             </p>
