@@ -24,17 +24,17 @@
 <body class="bg-[#1A1A1A] font-outfit text-base text-white">
     <header class="bg-[#1F1F1F]">
         <nav
-            class="text-white xl:text-lg flex justify-between gap-3 sm:gap-6 items-center w-[92%] md:w-[95%] mx-auto border-t-[15px] border-b-[12px] border-[#1F1F1F]">
+            class="flex justify-between gap-[5%] items-center w-[92%] mx-auto border-y-[10px] border-[#1F1F1F] sm:w-[75%] md:w-[95%] md:gap-[2%] xl:text-lg 2xl:w-[85%] 2xl:text-xl">
             <!-- Logo e nome -->
-            <div class="flex items-center gap-3 sm:gap-6">
+            <div class="flex items-center gap-[5%] sm:gap-6">
                 <img class="max-h-16" src="./images/logo.png" alt="Rino Logo">
                 <h1 class="font-bold text-center">Personal Reis</h1>
             </div>
 
             <!-- Menu de navegação -->
             <div
-                class="nav-links absolute z-50 top-[-100%] left-0 w-full bg-[#1F1F1F] transition-all duration-500 ease-in-out md:static md:flex md:w-auto md:min-h-fit md:top-0">
-                <ul class="flex flex-col md:flex-row md:items-center gap-8 md:gap-3 xl:gap-8 py-4 ml-4 sm:ml-0">
+                class="nav-links absolute z-50 top-[-100%] left-0 w-full bg-[#1F1F1F] transition-all duration-500 ease-in-out md:static md:flex md:w-auto">
+                <ul class="flex flex-col gap-8 py-4 ml-4 md:ml-0 md:flex-row md:items-center md:gap-3 xl:gap-8">
                     <li><a class="opacity-50 hover:opacity-100" href="#home">Home</a></li>
                     <li><a class="opacity-50 hover:opacity-100" href="#sobre">Sobre</a></li>
                     <li><a class="opacity-50 hover:opacity-100" href="#modalidades">Modalidades</a></li>
@@ -48,7 +48,8 @@
             <!-- Botão e ícone de menu -->
             <div class="flex items-center gap-6">
                 <button onclick="redirecionarWhatsApp()"
-                    class="bg-[#A50044] hover:bg-[#DB0030] text-sm xl:text-lg px-2 sm:px-5 md:hidden xl:block py-2 rounded-xl font-bold">Junte-se ao
+                    class="bg-[#A50044] hover:bg-[#DB0030] text-sm px-2 py-2 rounded-xl font-bold sm:px-5 md:hidden lg:block xl:text-lg">Junte-se
+                    ao
                     Time!</button>
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"
                     title="Abrir menu"></ion-icon>
@@ -57,28 +58,37 @@
     </header>
 
     <!-- Banner principal -->
-    <section id="home" class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 xl:px-32 mb-6 xl:mb-56 2xl:m">
+    <section id="home"
+        class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 xl:px-20 mb-6 xl:mb-56 2xl:m">
         <img src="./images/background.png" alt="background" class="absolute top-0 left-0 object-cover -z-10 2xl:w-full">
         <h1
-            class="font-oxanium font-extrabold text-2xl mt-10 md:mt-24 xl:mt-48 text-center -ml-[3.5%] xl:pr-14 sm:mt-52 sm:text-5xl md:text-5xl lg:text-7xl max-w-[60%] z-10">
-            TRANSFORME DESAFIOS EM VITÓRIAS!
+            class=" uppercase font-oxanium font-extrabold text-sm pr-[5%] mt-10 text-center max-w-[60%] z-10 sm:text-center sm:mt-24 sm:text-3xl md:pr-[22%] md:max-w-[80%] md:mt-24 md:text-4xl lg:text-6xl lg:pr-[23%] lg:max-w-[80%] lg:mt-36 xl:mt-48 xl:pr-[45%] xl:max-w-full xl:text-7xl 2xl:text-8xl 2xl:pr-[42%] 2xl:max-w-full">
+            Novos hábitos, novos resultados!
         </h1>
-        <h2 class="font-outfit opacity-70 sm:mt-4 text-xs sm:text-xl md:text-lg xl:text-2xl max-w-40 md:max-w-80 xl:max-w-md ml-3 text-justify">
-            Como um personal trainer apaixonado, acredito em capacitar as pessoas a alcançarem seus objetivos de saúde
-            por meio de treinamentos personalizados e suporte.
-        </h2>
+        <p
+            class="hidden font-outfit opacity-70 pl-[1%] text-justify text-xs max-w-[52%] xl:block xl:max-w-[50%] xl:text-3xl xl:mt-2 2xl:max-w-[50%] 2xl:text-4xl 2xl:mt-5">
+            Transforme seus treinos em algo estratégico e personalizado, deixando de lado a aleatoriedade. Com o meu
+            acompanhamento online, você terá um planejamento completo e exclusivo, com um roteiro claro: início, meio e
+            fim. Esqueça os treinos genéricos e alcance resultados reais com eficiência e propósito!
+        </p>
+        <p
+            class="font-outfit opacity-70 pl-[1%] text-justify text-xs max-w-[52%] sm:mt-2 sm:text-lg md:text-xl md:max-w-80 md:mt-3 lg:max-w-[50%] lg:text-2xl xl:hidden">
+            Transforme seus treinos com estratégia e personalização! Com meu acompanhamento online, você terá um
+            planejamento exclusivo, claro e eficiente, garantindo resultados reais e com propósito.
+        </p>
         <button onclick="redirecionarWhatsApp()"
-            class="bg-[#A50044] ml-3 px-3 sm:px-5 py-3 xl:px-7 xl:py-5 xl:text-xl mt-2 sm:mt-5 sm:text-base rounded-xl hover:bg-[#DB0030] text-xs font-bold hidden sm:block">Junte-se
+            class="bg-[#A50044] rounded-xl hover:bg-[#DB0030] text-xs font-bold hidden ml-3 px-3 py-3 mt-2 sm:px-5 sm:ml-1 sm:mt-2 sm:text-base sm:block md:mt-4 xl:px-7 xl:py-5 xl:text-xl xl:mt-5 2xl:px-9 2xl:py-7 2xl:text-3xl 2xl:mt-10">Junte-se
             ao Time!</button>
     </section>
 
     <!-- Sessão "Quem sou eu" -->
-    <section id="sobre" class="flex flex-col md:flex-row items-center justify-center gap-6 xl:gap-12 mt-12 w-full px-8 md:px-16">
+    <section id="sobre"
+        class="flex flex-col md:flex-row items-center justify-center gap-6 xl:gap-12 mt-12 w-full px-8 md:px-16">
         <!-- Vídeo -->
         <div class="flex-shrink-0">
             <div class="relative w-[288px] h-[162px] md:w-[336px] md:h-[189px] xl:w-[560px] xl:h-[315px]">
                 <iframe class="rounded-xl shadow-lg" width="100%" height="100%"
-                    src="https://www.youtube.com/embed/_ZfC7MBtY0Q?si=FTdYjO-LzX2XyaIP" title="YouTube video player"
+                    src="https://www.youtube.com/embed/4t_zM7M8tw4?si=7cnVr0HPnKn5FgdP" title="Saudações, Rinos"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
@@ -89,24 +99,26 @@
         <!-- Texto -->
         <div class="flex flex-col items-center md:items-start text-justify md:text-left max-w-[90%] md:max-w-[60%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">QUEM SOU EU?</h1>
-            <p class="opacity-70 mt-4 md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[92%] 2xl:xl:max-w-[70%] text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
-                mattis tellus. Nullam quis imperdiet augue.
+            <p
+                class="opacity-70 mt-4 md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[92%] 2xl:xl:max-w-[70%] text-justify">
+                Desde cedo, a musculação fez parte da minha vida. Sempre tive curiosidade em entender como o treinamento
+                funciona e, ao longo do tempo, essa curiosidade se transformou em paixão. Foi isso que me motivou a
+                estudar e me aprofundar no esporte, com o objetivo de ensinar e mostrar a cada pessoa que sua evolução
+                na academia é possível com o caminho certo.
             </p>
             <!-- Cards -->
             <ul class="mt-6 flex flex-wrap gap-2 xl:gap-4 justify-center md:justify-start text-center">
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">500+</h1>
+                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">600+</h1>
                     <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Rinos Satisfeitos</p>
                 </li>
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">10+</h1>
-                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Anos de Experiência</p>
+                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">7</h1>
+                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Anos de Prática na Musculação</p>
                 </li>
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">1K+</h1>
-                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Treinos Realizados</p>
+                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">1000+</h1>
+                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Treinos Entregues</p>
                 </li>
             </ul>
         </div>
@@ -118,14 +130,48 @@
         <!-- Texto -->
         <div class="flex flex-col items-center md:items-start text-justify md:text-left max-w-[90%] md:max-w-[60%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">MODALIDADES</h1>
-            <p class=" opacity-70 mt-4 text-base md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[600px] text-justify mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
-                mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum
-                eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet.
-            </p>
+            <div
+                class="hidden md:block opacity-70 mt-4 text-base md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[600px] text-justify mx-auto">
+                <p>
+                    Meu trabalho é voltado para atender diferentes objetivos e necessidades de cada aluno, oferecendo
+                    treinamentos específicos e personalizados.
+                </p>
+                <ul>
+                    <li>Hipertrofia: Desenvolvimento muscular através de estratégias de treino e progressão adequadas
+                        para
+                        quem busca ganhar massa e definição.
+                    </li>
+                    <li>Emagrecimento: Foco em treinos dinâmicos e eficazes para promover a queima de gordura, melhorar
+                        o
+                        condicionamento físico e alcançar um corpo mais saudável.
+                    </li>
+                    <li>Resistência: Planejamento voltado para aumentar a capacidade do corpo em sustentar esforços
+                        físicos
+                        prolongados, ideal para quem busca desempenho em atividades de longa duração.
+                    </li>
+                    <li>Força: Programas estruturados para aumentar a capacidade de levantar cargas maiores, fundamental
+                        tanto para ganhos de performance quanto para a construção muscular.
+                    </li>
+                </ul>
+                <p>
+                    Independentemente do seu objetivo, ofereço acompanhamento online completo, ajustando os treinos para
+                    que
+                    você alcance os melhores resultados com eficiência e segurança.
+                </p>
+            </div>
+            <div
+                class="md:hidden opacity-70 mt-4 text-base md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[600px] text-justify mx-auto">
+                <p>
+                    Meu trabalho é voltado para atender diferentes objetivos e necessidades de cada aluno, oferecendo
+                    treinamentos específicos e personalizados. Independentemente do seu objetivo, ofereço acompanhamento
+                    online completo, ajustando os treinos para
+                    que
+                    você alcance os melhores resultados com eficiência e segurança.
+                </p>
+            </div>
             <!-- Cards -->
-            <ul class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start text-center max-w-[500px] xl:max-w-[600px]">
+            <ul
+                class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start text-center max-w-[500px] xl:max-w-[600px]">
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
                     <h1 class="text-[#EDBA00] font-anton text-2xl">HIPERTROFIA</h1>
                 </li>
@@ -156,39 +202,17 @@
             <h1 class="text-4xl md:text-5xl font-anton">PROGRAMAS DE TREINO</h1>
             <h2 class=" opacity-50 text-xl">Escolha Seu Programa</h2>
         </div>
-        <div class="max-w-4xl md:max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 place-items-center">
-            <!-- Cartão 1 -->
+        <div class="max-w-4xl md:max-w-2xl mx-auto grid grid-cols-1 place-items-center">
+            <!-- Cartão -->
             <div
-                class="bg-[#1F1F1F] max-w-[70%] md:max-w-[80%] hover:scale-110 transition-transform duration-300 p-12 md:p-6 md:min-h-[450px] rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
-                <h3 class="text-lg">Personal Trainings</h3>
-                <p class="text-5xl font-anton my-4">200$</p>
-                <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
-                <p class="text-sm opacity-70 mb-6 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <button onclick="redirecionarWhatsApp()"
-                    class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
-                    Time!</button>
-            </div>
-            <!-- Cartão 2 -->
-            <div
-                class="bg-[#1F1F1F] max-w-[70%] md:max-w-[80%] hover:scale-110 transition-transform duration-300 p-12 md:p-6 md:min-h-[450px] rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
-                <h3 class="text-lg text-center">Personal Trainings + Diet</h3>
-                <p class="text-5xl font-anton my-4">300$</p>
-                <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
-                <p class="text-sm opacity-70 mb-6 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <button onclick="redirecionarWhatsApp()"
-                    class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
-                    Time!</button>
-            </div>
-            <!-- Cartão 3 -->
-            <div
-                class="bg-[#1F1F1F] max-w-[70%] md:max-w-[80%] hover:scale-110 transition-transform duration-300 p-12 md:p-6 md:min-h-[450px] rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
-                <h3 class="text-lg">Diet</h3>
-                <p class="text-5xl font-anton my-4">100$</p>
-                <p class="text-sm opacity-70 mb-6">Monthly Membership</p>
-                <p class="text-sm opacity-70 mb-6 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
+                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-transform duration-300 p-6 md:max-w-[80%] md:p-6 md:min-h-[450px] rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
+                <h3 class="">Consultoria on-line do RINO</h3>
+                <p class="text-5xl font-anton my-4">R$ 89,90</p>
+                <ul class="text-sm opacity-70 mb-6">
+                    <li>Ingressão na comunidade</li>
+                    <li>Programa de treino completo</li>
+                    <li>Suporte online</li>
+                </ul>
                 <button onclick="redirecionarWhatsApp()"
                     class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] font-bold border-white">Junte-se ao
                     Time!</button>
@@ -272,12 +296,24 @@
                     <span class="font-anton">Como Funciona o Acompanhamento?</span>
                     <span id="icon-0" class="text-[#DB0030] text-xl">-</span>
                 </button>
-                <div id="faq-0" class="opacity-70 text-xs leading-relaxed">
-                    <p class="mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                        urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                    </p>
+                <div id="faq-0" class="text-xs leading-relaxed">
+                    <div class="mb-4 text-justify">
+                        <p class="opacity-70">
+                            Eu vou montar um treino personalizado pra vc, tudo baseado na sua resposta a esse
+                            formulário:
+                        </p>
+                        <a href="https://forms.gle/ou2iCFTic4XhvANE7" class="cursor-pointer uppercase font-bold text-[#DB0030] opacity-100">formulário de trovão</a>
+                        <p class="opacity-70">
+                            O programa inclui:
+                        </p>
+                        <ul class="list-disc pl-4 opacity-70">
+                            <li>Treinos detalhados com exercícios, séries, repetições e ordem dos movimentos.</li>
+                            <li>Acesso a vídeos explicativos de cada exercício para execução segura e eficiente.</li>
+                            <li>Suporte online para tirar dúvidas e compartilhar experiências.</li>
+                            <li>Um plano estruturado que te guia diretamente ao seu objetivo.</li>
+                        </ul>
+                        <p class="opacity-70">Tudo isso por R$ 89,90 via Pix ou cartão.</p>
+                    </div>
                 </div>
             </div>
 
