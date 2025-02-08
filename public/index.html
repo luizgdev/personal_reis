@@ -59,8 +59,9 @@
 
     <!-- Banner principal -->
     <section id="home"
-        class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 xl:px-20 mb-6 xl:mb-56 2xl:m">
-        <img src="./images/background.png" alt="background" class="absolute top-0 left-0 object-cover -z-10 2xl:w-full">
+        class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 xl:px-20 mb-6 2xl:m">
+        <img id="bannerImage" src="./images/background.png" alt="background"
+            class="absolute top-0 left-0 object-cover -z-10 2xl:w-full">
         <h1
             class=" uppercase font-oxanium font-extrabold text-sm pr-[5%] mt-10 text-center max-w-[60%] z-10 sm:text-center sm:mt-24 sm:text-3xl md:pr-[22%] md:max-w-[80%] md:mt-24 md:text-4xl lg:text-6xl lg:pr-[23%] lg:max-w-[80%] lg:mt-36 xl:mt-48 xl:pr-[45%] xl:max-w-full xl:text-7xl 2xl:text-8xl 2xl:pr-[42%] 2xl:max-w-full">
             Novos hábitos, novos resultados!
@@ -83,11 +84,11 @@
 
     <!-- Sessão "Quem sou eu" -->
     <section id="sobre"
-        class="flex flex-col md:flex-row items-center justify-center gap-6 xl:gap-12 mt-12 w-full px-8 md:px-16">
+        class="flex flex-col xl:flex-row items-center justify-center gap-6 xl:gap-12 mt-12 max-w-[80%] xl:justify-evenly mx-auto">
         <!-- Vídeo -->
         <div class="flex-shrink-0">
-            <div class="relative w-[288px] h-[162px] md:w-[336px] md:h-[189px] xl:w-[560px] xl:h-[315px]">
-                <iframe class="rounded-xl shadow-lg" width="100%" height="100%"
+            <div class="relative w-[288px] md:w-[448px] xl:w-[560px] aspect-video">
+                <iframe class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
                     src="https://www.youtube.com/embed/4t_zM7M8tw4?si=7cnVr0HPnKn5FgdP" title="Saudações, Rinos"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -97,10 +98,10 @@
         </div>
 
         <!-- Texto -->
-        <div class="flex flex-col items-center md:items-start text-justify md:text-left max-w-[90%] md:max-w-[60%]">
+        <div class="flex flex-col items-center text-justify max-w-[90%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">QUEM SOU EU?</h1>
             <p
-                class="opacity-70 mt-4 md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[92%] 2xl:xl:max-w-[70%] text-justify">
+                class="opacity-70 mt-4 md:text-lg xl:text-2xl max-w-full xl:max-w-[92%] 2xl:xl:max-w-[70%] text-justify">
                 Desde cedo, a musculação fez parte da minha vida. Sempre tive curiosidade em entender como o treinamento
                 funciona e, ao longo do tempo, essa curiosidade se transformou em paixão. Foi isso que me motivou a
                 estudar e me aprofundar no esporte, com o objetivo de ensinar e mostrar a cada pessoa que sua evolução
@@ -126,31 +127,47 @@
 
     <!-- Sessão "Modalidades" -->
     <section id="modalidades"
-        class="flex flex-col md:flex-row items-center justify-center mt-12 xl:mt-24 gap-6 xl:gap-12 w-full px-8 md:px-16">
+        class="flex flex-col items-center justify-center mt-12 xl:mt-24 gap-6 xl:flex-row xl:gap-12 mx-auto max-w-[80%] xl:justify-between">
         <!-- Texto -->
-        <div class="flex flex-col items-center md:items-start text-justify md:text-left max-w-[90%] md:max-w-[60%]">
+        <div class="flex flex-col items-center text-justify max-w-[90%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">MODALIDADES</h1>
             <div
-                class="hidden md:block opacity-70 mt-4 text-base md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[600px] text-justify mx-auto">
+                class="hidden text-[#FFFFFFB3] md:block mt-4 text-base md:text-lg xl:text-2xl max-w-full text-justify mx-auto">
                 <p>
                     Meu trabalho é voltado para atender diferentes objetivos e necessidades de cada aluno, oferecendo
                     treinamentos específicos e personalizados.
                 </p>
-                <ul>
-                    <li>Hipertrofia: Desenvolvimento muscular através de estratégias de treino e progressão adequadas
-                        para
-                        quem busca ganhar massa e definição.
+                <ul class="list-disc pl-5">
+                    <li>
+                        <p>
+                            <span
+                                class="text-[#DB0030] bg-clip-text uppercase font-extrabold opacity-100">Hipertrofia:</span>
+                            Desenvolvimento muscular através de estratégias de treino e
+                            progressão adequadas
+                            para
+                            quem busca ganhar massa e definição.
+                        </p>
                     </li>
-                    <li>Emagrecimento: Foco em treinos dinâmicos e eficazes para promover a queima de gordura, melhorar
-                        o
-                        condicionamento físico e alcançar um corpo mais saudável.
+                    <li>
+                        <p>
+                            <span class="text-[#DB0030] uppercase font-extrabold opacity-100">Emagrecimento:</span>
+                            Foco em treinos dinâmicos e eficazes para promover a queima de gordura, melhorar
+                            o
+                            condicionamento físico e alcançar um corpo mais saudável.
+                        </p>
                     </li>
-                    <li>Resistência: Planejamento voltado para aumentar a capacidade do corpo em sustentar esforços
-                        físicos
-                        prolongados, ideal para quem busca desempenho em atividades de longa duração.
+                    <li>
+                        <p><span class="text-[#DB0030] uppercase font-extrabold opacity-100">Resistência:</span>
+                            Planejamento voltado para aumentar a capacidade do corpo em sustentar esforços
+                            físicos
+                            prolongados, ideal para quem busca desempenho em atividades de longa duração.
+                        </p>
                     </li>
-                    <li>Força: Programas estruturados para aumentar a capacidade de levantar cargas maiores, fundamental
-                        tanto para ganhos de performance quanto para a construção muscular.
+                    <li>
+                        <p><span class="text-[#DB0030] uppercase font-extrabold opacity-100">Força:</span>Programas
+                            estruturados para aumentar a capacidade de levantar cargas maiores, fundamental
+                            tanto para ganhos de performance quanto para a construção muscular.
+                        </p>
                     </li>
                 </ul>
                 <p>
@@ -170,29 +187,32 @@
                 </p>
             </div>
             <!-- Cards -->
+
+        </div>
+        <div class="container flex flex-col items-center gap-4 md:gap-0 md:flex-row md:justify-evenly max-w-[80%] xl:flex-col xl:max-w-full xl:gap-4">
+            <!-- Imagem -->
+            <div class="flex-shrink-0 flex items-center justify-center">
+                <div class="relative w-[85%] h-full md:w-[260px] xl:w-[336px]">
+                    <img class="rounded-xl shadow-lg w-full h-full object-cover" src="./images/reis.jpg"
+                        alt="Imagem ilustrativa" />
+                </div>
+            </div>
+
             <ul
-                class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start text-center max-w-[500px] xl:max-w-[600px]">
+                class="flex flex-wrap md:flex-col gap-2 md:gap-4 justify-center text-center max-w-[80%] xl:min-w-full">
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#EDBA00] font-anton text-2xl">HIPERTROFIA</h1>
+                    <h1 class="text-[#EDBA00] font-anton text-2xl xl:text-3xl">HIPERTROFIA</h1>
                 </li>
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#EDBA00] font-anton text-2xl">EMAGRECIMENTO</h1>
+                    <h1 class="text-[#EDBA00] font-anton text-2xl xl:text-3xl">EMAGRECIMENTO</h1>
                 </li>
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#EDBA00] font-anton text-2xl">RESISTÊNCIA</h1>
+                    <h1 class="text-[#EDBA00] font-anton text-2xl xl:text-3xl">RESISTÊNCIA</h1>
                 </li>
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#EDBA00] font-anton text-2xl">FORÇA</h1>
+                    <h1 class="text-[#EDBA00] font-anton text-2xl xl:text-3xl">FORÇA</h1>
                 </li>
             </ul>
-        </div>
-
-        <!-- Imagem -->
-        <div class="flex-shrink-0 flex items-center justify-center">
-            <div class="relative w-[85%] h-full md:w-[336px]">
-                <img class="rounded-xl shadow-lg w-full h-full object-cover" src="./images/reis.jpg"
-                    alt="Imagem ilustrativa" />
-            </div>
         </div>
     </section>
 
@@ -205,10 +225,10 @@
         <div class="max-w-4xl md:max-w-2xl mx-auto grid grid-cols-1 place-items-center">
             <!-- Cartão -->
             <div
-                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-transform duration-300 p-6 md:max-w-[80%] md:p-6 md:min-h-[450px] rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
+                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-transform duration-300 p-6 md:max-w-[80%] md:p-6 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
                 <h3 class="">Consultoria on-line do RINO</h3>
                 <p class="text-5xl font-anton my-4">R$ 89,90</p>
-                <ul class="text-sm opacity-70 mb-6">
+                <ul class="text-sm md:text-base opacity-70 mb-6">
                     <li>Ingressão na comunidade</li>
                     <li>Programa de treino completo</li>
                     <li>Suporte online</li>
@@ -284,7 +304,7 @@
         <div class="max-w-4xl mx-auto text-center">
             <!-- Título -->
             <h1 class="text-4xl md:text-5xl font-anton uppercase">Perguntas Frequentes</h1>
-            <h2 class="text-xl mt-2 opacity-50">Estou aqui para ajudar!</h2>
+            <h2 class="text-xl xl:text-2xl mt-2 opacity-50">Estou aqui para ajudar!</h2>
         </div>
 
         <!-- Container de FAQ -->
@@ -293,16 +313,18 @@
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(0)">
-                    <span class="font-anton">Como Funciona o Acompanhamento?</span>
+                    <span class="font-anton xl:text-2xl">Como Funciona o Acompanhamento?</span>
                     <span id="icon-0" class="text-[#DB0030] text-xl">-</span>
                 </button>
-                <div id="faq-0" class="text-xs leading-relaxed">
+                <div id="faq-0" class="text-xs md:text-base xl:text-lg leading-relaxed">
                     <div class="mb-4 text-justify">
                         <p class="opacity-70">
-                            Eu vou montar um treino personalizado pra vc, tudo baseado na sua resposta a esse
+                            Eu vou montar um treino personalizado para você, tudo baseado na sua resposta a esse
                             formulário:
                         </p>
-                        <a href="https://forms.gle/ou2iCFTic4XhvANE7" class="cursor-pointer uppercase font-bold text-[#DB0030] opacity-100">formulário de trovão</a>
+                        <a href="https://forms.gle/ou2iCFTic4XhvANE7"
+                            class="cursor-pointer uppercase font-bold text-[#DB0030] opacity-100">formulário de
+                            trovão</a>
                         <p class="opacity-70">
                             O programa inclui:
                         </p>
@@ -321,10 +343,10 @@
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(1)">
-                    <span class="font-anton">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span class="font-anton xl:text-2xl">Lorem ipsum dolor sit amet consectetur?</span>
                     <span id="icon-1" class="text-[#DB0030] text-xl">-</span>
                 </button>
-                <div id="faq-1" class="opacity-70 text-xs leading-relaxed">
+                <div id="faq-1" class="opacity-70 text-xs md:text-base xl:text-lg leading-relaxed">
                     <p class="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
                         urna.
@@ -337,10 +359,10 @@
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(2)">
-                    <span class="font-anton">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span class="font-anton xl:text-2xl">Lorem ipsum dolor sit amet consectetur?</span>
                     <span id="icon-2" class="text-[#DB0030] text-xl">-</span>
                 </button>
-                <div id="faq-2" class="opacity-70 text-xs leading-relaxed">
+                <div id="faq-2" class="opacity-70 text-xs md:text-base xl:text-lg leading-relaxed">
                     <p class="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
                         urna.
@@ -353,10 +375,10 @@
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(3)">
-                    <span class="font-anton">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span class="font-anton xl:text-2xl">Lorem ipsum dolor sit amet consectetur?</span>
                     <span id="icon-3" class="text-[#DB0030] text-xl">-</span>
                 </button>
-                <div id="faq-3" class="opacity-70 text-xs leading-relaxed">
+                <div id="faq-3" class="opacity-70 text-xs md:text-base xl:text-lg leading-relaxed">
                     <p class="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
                         urna.
@@ -383,7 +405,7 @@
             <h1 class="text-4xl md:text-5xl font-anton uppercase text-center md:text-left">
                 Quer alcançar seus objetivos?
             </h1>
-            <p class="opacity-70 px-6 md:px-0 text-center md:text-left">
+            <p class="opacity-70 px-6 md:px-0 text-center md:text-left xl:text-xl">
                 Me chame em minhas redes sociais. Basta apertar o botão e você será redirecionado(a)
                 para meu WhatsApp!
             </p>
@@ -598,6 +620,25 @@
             const url = `whatsapp://send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;
             window.open(url, '_blank');
         }
+    </script>
+
+    <script>
+        function adjustContainerHeight() {
+            const image = document.getElementById("bannerImage");
+            const container = document.getElementById("home");
+
+            if (image.complete) {
+                container.style.height = `${image.clientHeight}px`;
+            } else {
+                image.onload = () => {
+                    container.style.height = `${image.clientHeight}px`;
+                };
+            }
+        }
+
+        // Chama a função ao carregar a página e ao redimensionar
+        window.addEventListener("load", adjustContainerHeight);
+        window.addEventListener("resize", adjustContainerHeight);
     </script>
 </body>
 
