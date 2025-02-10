@@ -100,8 +100,7 @@
         <!-- Texto -->
         <div class="flex flex-col items-center text-justify max-w-[90%]">
             <h1 class="font-anton text-4xl md:text-5xl shadow-md">QUEM SOU EU?</h1>
-            <p
-                class="opacity-70 mt-4 md:text-lg xl:text-2xl max-w-full xl:max-w-[92%] 2xl:xl:max-w-[70%] text-justify">
+            <p class="opacity-70 mt-4 md:text-lg xl:text-2xl max-w-full xl:max-w-[92%] 2xl:xl:max-w-[70%] text-justify">
                 Desde cedo, a musculação fez parte da minha vida. Sempre tive curiosidade em entender como o treinamento
                 funciona e, ao longo do tempo, essa curiosidade se transformou em paixão. Foi isso que me motivou a
                 estudar e me aprofundar no esporte, com o objetivo de ensinar e mostrar a cada pessoa que sua evolução
@@ -189,7 +188,8 @@
             <!-- Cards -->
 
         </div>
-        <div class="container flex flex-col items-center gap-4 md:gap-0 md:flex-row md:justify-evenly max-w-[80%] xl:flex-col xl:max-w-full xl:gap-4">
+        <div
+            class="container flex flex-col items-center gap-4 md:gap-0 md:flex-row md:justify-evenly max-w-[80%] xl:flex-col xl:max-w-full xl:gap-4">
             <!-- Imagem -->
             <div class="flex-shrink-0 flex items-center justify-center">
                 <div class="relative w-[85%] h-full md:w-[260px] xl:w-[336px]">
@@ -198,8 +198,7 @@
                 </div>
             </div>
 
-            <ul
-                class="flex flex-wrap md:flex-col gap-2 md:gap-4 justify-center text-center max-w-[80%] xl:min-w-full">
+            <ul class="flex flex-wrap md:flex-col gap-2 md:gap-4 justify-center text-center max-w-[80%] xl:min-w-full">
                 <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
                     <h1 class="text-[#EDBA00] font-anton text-2xl xl:text-3xl">HIPERTROFIA</h1>
                 </li>
@@ -268,16 +267,18 @@
                         <img src="./images/aspas.png" alt="Imagem superior esquerda"
                             class="absolute -top-5 -left-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px]" />
                         <p id="quote-text" class="text-justify sm:text-[18px] md:text-[20px]">
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi."
+                            “Nossa disposição pro treino é algo surreal, independente de como foi o dia... eu e o vini
+                            já tentamos essa constância na academia juntos e separados e nuuuunca foi dessa maneira. O
+                            jeito q você faz o seu trabalho é muito foda cara.”
                         </p>
-                        <span id="quote-author" class="opacity-50 md:text-[20px] font-light">Fulano de Tal</span>
+                        <span id="quote-author" class="opacity-50 md:text-[20px] font-light">Stephany e Vini</span>
                     </div>
 
                     <!-- Imagem -->
                     <div id="quote" class="flex w-full md:w-[40%] overflow-visible relative">
                         <img src="./images/aspas.png" alt="Imagem inferior direita"
                             class="absolute -bottom-5 -right-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px] z-20" />
-                        <img id="slide-image" src="./images/logo.png" alt="Imagem 1"
+                        <img id="slide-image" src="./images/stephany_vini.jpg" alt="Alunos Stephany e Vinicius"
                             class="w-full h-full rounded-3xl shadow-lg object-cover" />
                     </div>
                 </div>
@@ -343,7 +344,7 @@
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(1)">
-                    <span class="font-anton xl:text-2xl">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span class="font-anton xl:text-2xl">Quanto tempo dura o programa de treino?</span>
                     <span id="icon-1" class="text-[#DB0030] text-xl">-</span>
                 </button>
                 <div id="faq-1" class="opacity-70 text-xs md:text-base xl:text-lg leading-relaxed">
@@ -359,26 +360,10 @@
             <div class="border-b border-gray-700">
                 <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
                     onclick="toggleFaq(2)">
-                    <span class="font-anton xl:text-2xl">Lorem ipsum dolor sit amet consectetur?</span>
+                    <span class="font-anton xl:text-2xl">Como saber qual exercício fazer?</span>
                     <span id="icon-2" class="text-[#DB0030] text-xl">-</span>
                 </button>
                 <div id="faq-2" class="opacity-70 text-xs md:text-base xl:text-lg leading-relaxed">
-                    <p class="mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
-                        urna.
-                        Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="border-b border-gray-700">
-                <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
-                    onclick="toggleFaq(3)">
-                    <span class="font-anton xl:text-2xl">Lorem ipsum dolor sit amet consectetur?</span>
-                    <span id="icon-3" class="text-[#DB0030] text-xl">-</span>
-                </button>
-                <div id="faq-3" class="opacity-70 text-xs md:text-base xl:text-lg leading-relaxed">
                     <p class="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit
                         urna.
@@ -489,9 +474,9 @@
     <script>
         const slides = [
             {
-                image: "./images/logo.png",
-                text: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.”",
-                author: "Fulano de Tal",
+                image: "./images/stephany_vini.jpg",
+                text: "“Nossa disposição pro treino é algo surreal, independente de como foi o dia... eu e o vini já tentamos essa constância na academia juntos e separados e nuuuunca foi dessa maneira. O jeito q você faz o seu trabalho é muito foda cara.”",
+                author: "Stephany e Vini",
             },
             {
                 image: "./images/reis.jpg",
