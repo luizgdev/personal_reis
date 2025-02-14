@@ -16,9 +16,9 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&display=swap"
         rel="stylesheet">
     <!-- Ícones -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body class="bg-[#1A1A1A] font-outfit text-base text-white">
@@ -33,7 +33,7 @@
 
             <!-- Menu de navegação -->
             <div
-                class="nav-links absolute z-50 top-[-100%] left-0 w-full bg-[#1F1F1F] transition-all duration-500 ease-in-out md:static md:flex md:w-auto">
+                class="nav-links absolute z-50 hidden left-0 w-full bg-[#1F1F1F] transition-all duration-500 ease-in-out md:static md:flex md:w-auto">
                 <ul class="flex flex-col gap-8 py-4 ml-4 md:ml-0 md:flex-row md:items-center md:gap-3 xl:gap-8">
                     <li><a class="opacity-50 hover:opacity-100" href="#home">Home</a></li>
                     <li><a class="opacity-50 hover:opacity-100" href="#sobre">Sobre</a></li>
@@ -408,17 +408,26 @@
             <!-- Seção 1: Sobre -->
             <div>
                 <h2 class="text-lg font-bold mb-4">Personal Reis</h2>
-                <p class="text-sm text-gray-400 mb-4">
-                    Lorem ipsum dolor sit amet consectetur. Ut a mattis eget augue vivamus parturient eu aliquet.
-                    In laoreet risus ut nulla interdum urna sollicitudin. Nisi viverra in id ultricies.
+                <p class="hidden md:block text-sm opacity-50 mb-4 text-justify">
+                    Transforme seus treinos em algo estratégico e personalizado, deixando de lado a aleatoriedade. Com o
+                    meu
+                    acompanhamento online, você terá um planejamento completo e exclusivo, com um roteiro claro: início,
+                    meio e
+                    fim. Esqueça os treinos genéricos e alcance resultados reais com eficiência e propósito!
+                </p>
+                <p class="md:hidden text-sm opacity-50 mb-4 text-justify">Transforme seus treinos com estratégia e
+                    personalização! Com meu acompanhamento online, você terá um
+                    planejamento exclusivo, claro e eficiente, garantindo resultados reais e com propósito.
                 </p>
                 <div class="flex items-center gap-4">
                     <!-- Ícones sociais -->
-                    <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white">
+                    <a href="https://www.instagram.com/personalreis/" aria-label="Instagram"
+                        class="opacity-50 hover:opacity-100">
                         <ion-icon name="logo-instagram"></ion-icon>
                     </a>
-                    <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white">
-                        <ion-icon name="logo-facebook"></ion-icon>
+                    <a href="https://www.youtube.com/@personalreis" aria-label="YouTube"
+                        class="opacity-50 hover:opacity-100">
+                        <ion-icon name="logo-youtube"></ion-icon>
                     </a>
                 </div>
             </div>
@@ -441,17 +450,17 @@
             <div>
                 <h2 class="text-lg font-bold mb-4">Contato</h2>
                 <ul class="text-sm space-y-2">
-                    <li class="opacity-50">Lorem Ipsum 22, LP19204</li>
-                    <li class="opacity-50">+55 (61) 9 9999-9999</li>
-                    <li><a href="mailto:personalreis@email.com" class="hover:opacity-70">personalreis@email.com</a>
+                    <li class="opacity-50">Luiz Gustavo (Programador)</li>
+                    <li onclick="redirecionarWhatsApp1()" class="cursor-pointer">+55 (61) 9 9414-9780</li>
+                    <li><a href="mailto:luizg.dev@gmail.com" class="cursor-pointer">luizg.dev@gmail.com</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <!-- Linha divisória -->
-        <div class="border-t border-gray-800 mt-8 pt-4 text-center text-sm text-gray-500">
-            © 2024. All rights reserved.
+        <div class="border-t border-gray-800 mt-8 pt-4 text-center text-sm opacity-50">
+            © 2024. Todos os direitos reservados.
         </div>
     </footer>
 
@@ -469,6 +478,23 @@
             document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto'; // Evita scroll ao abrir o menu
         }
 
+        // Função para fechar o menu ao clicar em um link
+        function closeMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const menuIcon = document.querySelector('ion-icon[name="close"]');
+
+            if (menuIcon) {
+                menuIcon.name = 'menu';
+                navLinks.style.top = '-100%'; // Esconde o menu
+                navLinks.style.display = 'hidden'; // Reseta o display
+                document.body.style.overflow = 'auto'; // Permite scroll
+            }
+        }
+
+        // Adiciona evento de clique aos links do menu
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
     </script>
 
     <script>
@@ -602,6 +628,12 @@
         function redirecionarWhatsApp() {
             const numero = '5561996022463'; // Substitua pelo número de WhatsApp (incluindo o código do país e DDD)
             const mensagem = 'Olá, gostaria de mais informações!'; // Mensagem padrão
+            const url = `whatsapp://send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+        function redirecionarWhatsApp1() {
+            const numero = '5561994149780'; // Substitua pelo número de WhatsApp (incluindo o código do país e DDD)
+            const mensagem = 'Olá, vim do site do Personal Reis e gostaria de mais informações!'; // Mensagem padrão
             const url = `whatsapp://send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;
             window.open(url, '_blank');
         }
