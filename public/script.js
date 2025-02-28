@@ -148,7 +148,7 @@ window.onload = function () {
 
 function redirecionarWhatsApp() {
     const numero = '5561996022463'; // Número do WhatsApp
-    const mensagem = 'Olá, vim do site e gostaria de mais informações!'; // Mensagem padrão
+    const mensagem = 'Olá, vim do site e gostaria de fechar minha montagem dos treinos!'; // Mensagem padrão
     const url = `whatsapp://send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank');
 }
