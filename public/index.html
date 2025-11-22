@@ -4,7 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Reis</title>
+    <meta name="description"
+        content="Consultoria Online de Treino com Personal Reis. Hipertrofia, emagrecimento e performance com acompanhamento personalizado.">
+    <meta name="keywords"
+        content="personal trainer, consultoria online, musculação, hipertrofia, emagrecimento, treino personalizado">
+    <meta name="author" content="Personal Reis">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://personalreis.com.br/">
+    <meta property="og:title" content="Personal Reis - Consultoria Online Premium">
+    <meta property="og:description"
+        content="Transforme seu corpo com um planejamento estratégico e exclusivo. Treinos personalizados para seus objetivos.">
+    <meta property="og:image" content="https://personalreis.com.br/images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://personalreis.com.br/">
+    <meta property="twitter:title" content="Personal Reis - Consultoria Online Premium">
+    <meta property="twitter:description"
+        content="Transforme seu corpo com um planejamento estratégico e exclusivo. Treinos personalizados para seus objetivos.">
+    <meta property="twitter:image" content="https://personalreis.com.br/images/logo.png">
+
+    <title>Personal Reis | Consultoria Online</title>
     <!-- Ícone do site -->
     <link rel="icon" type="image/png" href="/images/logo.png">
     <!-- Estilos personalizados -->
@@ -13,678 +35,663 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Ícones -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
 </head>
 
-<body class="bg-[#1A1A1A] font-outfit text-base text-white">
-    <header class="bg-[#1F1F1F]">
-        <nav
-            class="flex justify-evenly gap-[5%] items-center w-[92%] mx-auto border-y-[10px] border-[#1F1F1F] sm:w-[75%] md:w-[95%] md:gap-[2%] xl:text-lg 2xl:w-[85%] 2xl:text-xl">
+<body
+    class="bg-brand-dark font-sans text-base text-white overflow-x-hidden selection:bg-brand-primary selection:text-white">
+    <!-- Background Mesh Gradients -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div
+            class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-brand-primary/20 rounded-full blur-[120px] animate-pulse">
+        </div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-brand-blue/10 rounded-full blur-[120px]">
+        </div>
+    </div>
+
+    <header
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo e nome -->
-            <div class="flex items-center gap-[5%] sm:gap-6">
-                <img class="max-h-16" src="./images/logo.png" alt="Rino Logo">
-                <h1 class="font-bold text-center">Personal Reis</h1>
+            <div class="flex items-center gap-4" data-aos="fade-down">
+                <img class="h-10 md:h-12" src="./images/logo.webp" alt="Rino Logo">
+                <span class="font-bold text-xl tracking-tight">Personal Reis</span>
             </div>
 
-            <!-- Menu de navegação -->
-            <div
-                class="nav-links absolute z-50 hidden left-0 w-full bg-[#1F1F1F] transition-all duration-500 ease-in-out md:static md:flex md:w-auto">
-                <ul class="flex flex-col gap-8 py-4 ml-4 md:ml-0 md:flex-row md:items-center md:gap-3 xl:gap-8">
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300" href="#home">Home</a>
-                    </li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300" href="#sobre">Sobre</a>
-                    </li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
+            <!-- Menu de navegação (apenas desktop) -->
+            <div class="hidden md:flex items-center gap-8">
+                <ul class="flex items-center gap-8 text-sm font-medium uppercase tracking-wider text-gray-300">
+                    <li><a class="hover:text-brand-primary transition-colors duration-300" href="#home">Home</a></li>
+                    <li><a class="hover:text-brand-primary transition-colors duration-300" href="#sobre">Sobre</a></li>
+                    <li><a class="hover:text-brand-primary transition-colors duration-300"
                             href="#modalidades">Modalidades</a></li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
-                            href="#preço">Serviços</a></li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
-                            href="#reviews">Avaliações</a></li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
-                            href="#perguntas">Perguntas Frequentes</a></li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
-                            href="#contato">Contato</a></li>
+                    <li><a class="hover:text-brand-primary transition-colors duration-300" href="#preço">Planos</a></li>
+                    <li><a class="hover:text-brand-primary transition-colors duration-300"
+                            href="#reviews">Depoimentos</a></li>
+                    <li><a class="hover:text-brand-primary transition-colors duration-300" href="#perguntas">FAQ</a>
+                    </li>
                 </ul>
             </div>
 
-            <!-- Botão e ícone de menu -->
-            <div class="flex items-center gap-6">
-                <button onclick="redirecionarWhatsApp()"
-                    class="bg-[#A50044] hover:bg-[#DB0030] transition-colors duration-300 text-sm px-2 py-2 rounded-xl font-bold sm:px-5 md:hidden lg:block xl:text-lg">Junte-se
-                    ao
-                    Time!</button>
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"
-                    title="Abrir menu"></ion-icon>
-            </div>
+            <!-- Botão CTA (visível em todas as telas) -->
+            <button
+                class="js-whatsapp-join bg-brand-primary hover:bg-brand-accent hover:scale-105 text-white text-sm font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg shadow-brand-primary/25 ring-1 ring-white/10">
+                Começar Agora
+            </button>
         </nav>
     </header>
 
-    <!-- Banner principal -->
-    <section id="home"
-        class="relative flex flex-col justify-center items-start px-4 sm:px-8 md:px-16 xl:px-20 mb-6 2xl:m">
-        <img id="bannerImage" src="./images/background.png" alt="background"
-            class="absolute top-0 left-0 object-cover -z-10 2xl:w-full">
-        <h1
-            class=" uppercase font-oxanium font-extrabold text-sm pr-[5%] mt-10 text-center max-w-[60%] z-10 sm:text-center sm:mt-24 sm:text-3xl md:pr-[22%] md:max-w-[80%] md:mt-24 md:text-4xl lg:text-6xl lg:pr-[23%] lg:max-w-[80%] lg:mt-36 xl:mt-48 xl:pr-[45%] xl:max-w-full xl:text-7xl 2xl:text-8xl 2xl:pr-[42%] 2xl:max-w-full">
-            Novos hábitos, novos resultados!
-        </h1>
-        <p
-            class="hidden font-outfit opacity-70 pl-[1%] text-justify text-xs max-w-[52%] xl:block xl:max-w-[50%] xl:text-3xl xl:mt-2 2xl:max-w-[50%] 2xl:text-4xl 2xl:mt-5">
-            Transforme seus treinos em algo estratégico e personalizado, deixando de lado a aleatoriedade. Com o meu
-            acompanhamento online, você terá um planejamento completo e exclusivo, com um roteiro claro: início, meio e
-            fim. Esqueça os treinos genéricos e alcance resultados reais com eficiência e propósito!
-        </p>
-        <p
-            class="font-outfit opacity-70 pl-[1%] text-justify text-xs max-w-[52%] sm:mt-2 sm:text-lg md:text-xl md:max-w-80 md:mt-3 lg:max-w-[50%] lg:text-2xl xl:hidden">
-            Transforme seus treinos com estratégia e personalização! Com meu acompanhamento online, você terá um
-            planejamento exclusivo, claro e eficiente, garantindo resultados reais e com propósito.
-        </p>
-        <button onclick="redirecionarWhatsApp()"
-            class="bg-[#A50044] rounded-xl hover:bg-[#DB0030] transition-colors duration-300 text-xs font-bold hidden ml-3 px-3 py-3 mt-2 sm:px-5 sm:ml-1 sm:mt-2 sm:text-base sm:block md:mt-4 xl:px-7 xl:py-5 xl:text-xl xl:mt-5 2xl:px-9 2xl:py-7 2xl:text-3xl 2xl:mt-10">Junte-se
-            ao Time!</button>
-    </section>
+    <!-- Banner principal (Hero) -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
 
-    <!-- Sessão "Quem sou eu" -->
-    <section id="sobre"
-        class="flex flex-col xl:flex-row items-center justify-center gap-6 xl:gap-12 mt-12 max-w-[80%] xl:justify-evenly mx-auto">
-        <!-- Vídeo -->
-        <div class="flex-shrink-0">
-            <div class="relative w-[288px] md:w-[448px] xl:w-[560px] aspect-video">
-                <iframe class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
-                    src="https://www.youtube.com/embed/4t_zM7M8tw4?si=7cnVr0HPnKn5FgdP" title="Saudações, Rinos"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+            <!-- Texto Hero -->
+            <div class="flex-1 z-10 text-center md:text-left mt-10 md:mt-0">
+
+
+                <h1 class="font-sans font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6"
+                    data-aos="fade-up" data-aos-delay="200">
+                    Novos hábitos, <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-glow">novos
+                        resultados.</span>
+                </h1>
+
+                <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0 mb-10"
+                    data-aos="fade-up" data-aos-delay="300">
+                    Transforme seu corpo com um planejamento estratégico e exclusivo. Chega de treinos genéricos.
+                    Alcance sua melhor versão com eficiência e propósito.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center md:justify-start"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <button
+                        class="js-whatsapp-join w-full sm:w-auto bg-brand-primary hover:bg-brand-accent text-white text-base sm:text-lg font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 shadow-xl shadow-brand-primary/30 hover:shadow-brand-primary/50 hover:-translate-y-1 ring-1 ring-white/20 min-h-[48px]">
+                        Quero Fazer Parte do Time
+                    </button>
+                    <a href="#sobre"
+                        class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all duration-300 text-center font-medium min-h-[48px] flex items-center justify-center">
+                        Saiba Mais
+                    </a>
+                </div>
+
+                <!-- Stats Mini -->
+
+            </div>
+
+            <!-- Imagem Hero -->
+            <div class="flex-1 relative w-full max-w-lg md:max-w-xl lg:max-w-2xl" data-aos="fade-left"
+                data-aos-duration="1000">
+                <!-- Glow effect behind image -->
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-brand-primary/20 blur-[100px] rounded-full -z-10">
+                </div>
+
+                <div class="relative z-10 animate-float flex justify-center">
+                    <img src="./images/logo.webp" alt="Personal Reis Logo"
+                        class="w-[80%] md:w-full h-auto object-contain drop-shadow-2xl">
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Texto -->
-        <div class="flex flex-col items-center text-justify max-w-[90%]">
-            <h1 class="font-anton text-4xl md:text-5xl shadow-md">QUEM SOU EU?</h1>
-            <p class="opacity-70 mt-4 md:text-lg xl:text-2xl max-w-full xl:max-w-[92%] 2xl:xl:max-w-[70%] text-justify">
-                Desde cedo, a musculação fez parte da minha vida. Sempre tive curiosidade em entender como o treinamento
-                funciona e, ao longo do tempo, essa curiosidade se transformou em paixão. Foi isso que me motivou a
-                estudar e me aprofundar no esporte, com o objetivo de ensinar e mostrar a cada pessoa que sua evolução
-                na academia é possível com o caminho certo.
-            </p>
-            <!-- Cards -->
-            <ul class="mt-6 flex flex-wrap gap-2 xl:gap-4 justify-center md:justify-start text-center">
-                <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">700+</h1>
-                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Rinos Satisfeitos</p>
-                </li>
-                <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">7</h1>
-                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Anos de Prática na Musculação</p>
-                </li>
-                <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#004D98] font-anton text-3xl xl:text-4xl">1300+</h1>
-                    <p class="text-xs md:text-base xl:text-lg mt-1 opacity-80">Treinos Entregues</p>
-                </li>
-            </ul>
+    <!-- Sessão "Quem sou eu" (Bento Grid) -->
+    <section id="sobre" class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                <!-- Title Block -->
+                <div class="lg:col-span-12 text-center mb-8 md:mb-12" data-aos="fade-up">
+                    <h2 class="text-xs md:text-sm font-bold text-brand-primary uppercase tracking-widest mb-2">O
+                        Treinador</h2>
+                    <h2 class="font-sans font-bold text-3xl md:text-4xl lg:text-5xl">Quem sou eu?</h2>
+                </div>
+
+                <!-- Video Block (Large) -->
+                <div class="lg:col-span-7 bg-brand-surface/50 backdrop-blur-sm border border-white/5 rounded-3xl p-2 overflow-hidden group hover:border-brand-primary/30 transition-all duration-500"
+                    data-aos="fade-right">
+                    <div class="relative w-full h-full min-h-[300px] md:min-h-[400px] rounded-2xl overflow-hidden">
+                        <iframe class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/4t_zM7M8tw4?si=F9O43-nD2cFrZe4A"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Bio Block -->
+                <div class="lg:col-span-5 bg-brand-surface/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8 flex flex-col justify-center hover:bg-brand-surface/80 transition-all duration-300"
+                    data-aos="fade-left">
+                    <p class="text-gray-300 text-lg leading-relaxed text-justify">
+                        Desde cedo, a musculação fez parte da minha vida. Sempre tive curiosidade em entender como o
+                        treinamento funciona e, ao longo do tempo, essa curiosidade se transformou em paixão. Foi isso
+                        que me motivou a estudar e me aprofundar no esporte, com o objetivo de ensinar e mostrar a cada
+                        pessoa que sua evolução na academia é possível com o caminho certo.
+                    </p>
+                </div>
+
+                <!-- Stats Blocks (Bento) -->
+                <div class="lg:col-span-4 bg-brand-surface/50 backdrop-blur-sm border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center text-center hover:scale-[1.02] transition-transform duration-300 group"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-brand-blue to-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                        700+</h1>
+                    <p class="text-gray-400 uppercase tracking-wider font-medium text-sm md:text-base">Rinos Satisfeitos
+                    </p>
+                </div>
+
+                <div class="lg:col-span-4 bg-brand-surface/50 backdrop-blur-sm border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center text-center hover:scale-[1.02] transition-transform duration-300 group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-brand-primary to-brand-accent mb-2 group-hover:scale-110 transition-transform duration-300">
+                        7</h1>
+                    <p class="text-gray-400 uppercase tracking-wider font-medium text-sm md:text-base">Anos de Prática
+                    </p>
+                </div>
+
+                <div class="lg:col-span-4 bg-brand-surface/50 backdrop-blur-sm border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center text-center hover:scale-[1.02] transition-transform duration-300 group"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-brand-yellow to-yellow-200 mb-2 group-hover:scale-110 transition-transform duration-300">
+                        1300+</h1>
+                    <p class="text-gray-400 uppercase tracking-wider font-medium text-sm md:text-base">Treinos Entregues
+                    </p>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <!-- Sessão "Modalidades" -->
-    <section id="modalidades"
-        class="flex flex-col items-center justify-center mt-12 xl:mt-24 gap-6 xl:flex-row xl:gap-12 mx-auto max-w-[80%] xl:justify-between">
-        <!-- Texto -->
-        <div class="flex flex-col items-center text-justify max-w-[90%]">
-            <h1 class="font-anton text-4xl md:text-5xl shadow-md">MODALIDADES</h1>
-            <div
-                class="hidden text-[#FFFFFFB3] md:block mt-4 text-base md:text-lg xl:text-2xl max-w-full text-justify mx-auto">
-                <p>
-                    Meu trabalho é voltado para atender diferentes objetivos e necessidades de cada aluno, oferecendo
-                    treinamentos específicos e personalizados.
-                </p>
-                <ul class="list-disc pl-5">
-                    <li>
-                        <p>
-                            <span
-                                class="text-[#DB0030] bg-clip-text uppercase font-extrabold opacity-100">Hipertrofia:</span>
-                            Desenvolvimento muscular através de estratégias de treino e
-                            progressão adequadas
-                            para
-                            quem busca ganhar massa e definição.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <span class="text-[#DB0030] uppercase font-extrabold opacity-100">Emagrecimento:</span>
-                            Foco em treinos dinâmicos e eficazes para promover a queima de gordura, melhorar
-                            o
-                            condicionamento físico e alcançar um corpo mais saudável.
-                        </p>
-                    </li>
-                    <li>
-                        <p><span class="text-[#DB0030] uppercase font-extrabold opacity-100">Resistência:</span>
-                            Planejamento voltado para aumentar a capacidade do corpo em sustentar esforços
-                            físicos
-                            prolongados, ideal para quem busca desempenho em atividades de longa duração.
-                        </p>
-                    </li>
-                    <li>
-                        <p><span class="text-[#DB0030] uppercase font-extrabold opacity-100">Força:</span>Programas
-                            estruturados para aumentar a capacidade de levantar cargas maiores, fundamental
-                            tanto para ganhos de performance quanto para a construção muscular.
-                        </p>
-                    </li>
-                </ul>
-                <p>
-                    Independentemente do seu objetivo, ofereço acompanhamento online completo, ajustando os treinos para
-                    que
-                    você alcance os melhores resultados com eficiência e segurança.
-                </p>
-            </div>
-            <div
-                class="md:hidden opacity-70 mt-4 text-base md:text-lg xl:text-2xl max-w-[500px] xl:max-w-[600px] text-justify mx-auto">
-                <p>
-                    Meu trabalho é voltado para atender diferentes objetivos e necessidades de cada aluno, oferecendo
-                    treinamentos específicos e personalizados. Independentemente do seu objetivo, ofereço acompanhamento
-                    online completo, ajustando os treinos para
-                    que
-                    você alcance os melhores resultados com eficiência e segurança.
-                </p>
-            </div>
-            <!-- Cards -->
-
-        </div>
-        <div
-            class="container flex flex-col items-center gap-4 md:gap-0 md:flex-row md:justify-evenly max-w-[80%] xl:flex-col xl:max-w-full xl:gap-4">
-            <!-- Imagem -->
-            <div class="flex-shrink-0 flex items-center justify-center">
-                <div class="relative w-[85%] h-full md:w-[260px] xl:w-[336px]">
-                    <img class="rounded-xl shadow-lg w-full h-full object-cover" src="./images/reis.jpg"
-                        alt="Imagem ilustrativa" />
-                </div>
-            </div>
-
-            <ul class="flex flex-wrap md:flex-col gap-2 md:gap-4 justify-center text-center max-w-[80%] xl:min-w-full">
-                <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#EDBA00] font-anton text-2xl xl:text-3xl">HIPERTROFIA</h1>
-                </li>
-                <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#EDBA00] font-anton text-2xl xl:text-3xl">EMAGRECIMENTO</h1>
-                </li>
-                <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#EDBA00] font-anton text-2xl xl:text-3xl">RESISTÊNCIA</h1>
-                </li>
-                <li class="flex-1 bg-[#1F1F1F] rounded-xl flex flex-col items-center justify-center p-4 shadow-md">
-                    <h1 class="text-[#EDBA00] font-anton text-2xl xl:text-3xl">FORÇA</h1>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Seção de Programas de Treino -->
-    <section id="preço" class="my-12 xl:my-24">
-        <div class="text-center mb-6">
-            <h1 class="text-4xl md:text-5xl font-anton">PROGRAMAS DE TREINO</h1>
-            <h2 class=" opacity-50 text-xl">Escolha Seu Programa</h2>
-        </div>
-        <div class="max-w-4xl md:max-w-2xl mx-auto grid grid-cols-1 place-items-center">
-            <!-- Cartão -->
-            <div
-                class="bg-[#1F1F1F] max-w-[70%] hover:scale-110 transition-all duration-300 p-6 md:max-w-[80%] md:p-6 rounded-lg shadow-lg text-center border-2 border-[#909090] hover:border-[#A50044]">
-                <h3 class="">Consultoria on-line do RINO</h3>
-                <p class="text-5xl font-anton my-4">R$ 89,90</p>
-                <ul class="text-sm md:text-base opacity-70 mb-6">
-                    <li>Ingressão na comunidade</li>
-                    <li>Programa de treino completo</li>
-                    <li>Suporte online</li>
-                </ul>
-                <button onclick="redirecionarWhatsApp()"
-                    class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] transition-colors duration-300 font-bold border-white">Junte-se
-                    ao
-                    Time!</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="flex flex-col items-center justify-center my-12 xl:my-24 relative">
-        <!-- Gradiente de Fundo -->
-        <div
-            class="absolute items-center justify-center w-[50%] sm:w-[30%] h-auto aspect-square blur-[150px] bg-[#FF2332] opacity-50 object-cover z-0">
+    <section id="modalidades" class="py-16 md:py-24 bg-brand-surface/30 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent">
         </div>
 
-        <!-- Título -->
-        <h1 class="text-center text-4xl sm:text-4xl md:text-5xl font-anton uppercase z-10">
-            Ainda tem dúvida? <br />
-            <span class="text-2xl sm:text-3xl md:text-4xl text-[#DB0030]">Deixe que os rinos te digam</span>
-        </h1>
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
 
-        <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-6 z-10 relative">
-            <!-- Botão Anterior -->
-            <button id="prev-btn" class="hidden sm:block sm:w-[48px] sm:h-[48px] text-2xl sm:text-3xl">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </button>
+                <!-- Content -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h2 class="text-xs md:text-sm font-bold text-brand-primary uppercase tracking-widest mb-2">
+                        Metodologia</h2>
+                    <h2 class="font-sans font-bold text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-8">Modalidades</h2>
 
-            <!-- Área de Swipe -->
-            <div id="swipe-container" class="flex flex-col items-center gap-4 w-[85%] md:w-[60%]">
-                <!-- Seção de Texto e Imagem -->
-                <div id="swipe-content"
-                    class="flex flex-col md:flex-row justify-center items-center px-4 py-4 gap-4 bg-[#1F1F1F] rounded-3xl shadow-lg relative w-full">
-                    <!-- Texto -->
-                    <div id="quote-section" class="flex flex-col justify-center px-6 py-4 gap-2 w-full md:w-[60%]">
-                        <img src="./images/aspas.png" alt="Imagem superior esquerda"
-                            class="absolute -top-5 -left-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px]" />
-                        <p id="quote-text" class="text-justify sm:text-[18px] md:text-[20px]">
-                            “Nossa disposição pro treino é algo surreal, independente de como foi o dia... Eu e o Vini
-                            já tentamos essa constância na academia juntos e separados e nuuuunca foi dessa maneira. O
-                            jeito q você faz o seu trabalho é muito foda cara.”
-                        </p>
-                        <span id="quote-author" class="opacity-50 md:text-[20px] font-light">Stephany e Vini</span>
-                    </div>
-
-                    <!-- Imagem -->
-                    <div id="quote" class="flex w-full md:w-[40%] overflow-visible relative">
-                        <img src="./images/aspas.png" alt="Imagem inferior direita"
-                            class="absolute -bottom-5 -right-5 w-[50px] sm:w-[70px] h-[50px] sm:h-[70px] z-20" />
-                        <img id="slide-image" src="./images/stephany_vini.jpg" alt="Alunos Stephany e Vinicius"
-                            class="w-full h-full rounded-3xl shadow-lg object-cover" />
-                    </div>
-                </div>
-            </div>
-
-            <!-- Botão Próximo -->
-            <button id="next-btn" class="hidden sm:block sm:w-[48px] sm:h-[48px] text-2xl sm:text-3xl">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-            </button>
-        </div>
-
-        <!-- Paginação -->
-        <div class="flex space-x-2 shadow-sm z-10 mt-8">
-            <div data-index="0"
-                class="pagination-dot w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] bg-[#DB0030] rounded-full"></div>
-            <div data-index="1"
-                class="pagination-dot w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] bg-[#909090] rounded-full"></div>
-            <div data-index="2"
-                class="pagination-dot w-[8px] sm:w-[10px] h-[8px] sm:h-[10px] bg-[#909090] rounded-full"></div>
-        </div>
-    </section>
-
-    <section id="perguntas" class="my-12 xl:my-24 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <!-- Título -->
-            <h1 class="text-4xl md:text-5xl font-anton uppercase">Perguntas Frequentes</h1>
-            <h2 class="text-xl xl:text-2xl mt-2 opacity-50">Estou aqui para ajudar!</h2>
-        </div>
-
-        <!-- Container de FAQ -->
-        <div class="mt-6 px-4 max-w-4xl mx-auto space-y-4">
-            <!-- Item 1 -->
-            <div class="border-b border-gray-700">
-                <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
-                    onclick="toggleFaq(0)">
-                    <span class="font-anton xl:text-2xl">Como Funciona o Acompanhamento?</span>
-                    <span id="icon-0" class="text-[#DB0030] text-xl">-</span>
-                </button>
-                <div id="faq-0" class="text-xs md:text-base xl:text-lg leading-relaxed">
-                    <div class="mb-4 text-justify">
-                        <p class="opacity-70">
-                            Eu vou montar um treino personalizado para você, tudo baseado na sua resposta a esse
-                            formulário:
-                        </p>
-                        <a href="https://forms.gle/ou2iCFTic4XhvANE7"
-                            class="cursor-pointer uppercase font-bold text-[#DB0030] opacity-100">formulário de
-                            trovão</a>
-                        <p class="opacity-70">
-                            O programa inclui:
-                        </p>
-                        <ul class="list-disc pl-6 opacity-70">
-                            <li>Treinos detalhados com exercícios, séries, repetições e ordem dos movimentos.</li>
-                            <li>Acesso a vídeos explicativos de cada exercício para execução segura e eficiente.</li>
-                            <li>Suporte online para tirar dúvidas e compartilhar experiências.</li>
-                            <li>Um plano estruturado que te guia diretamente ao seu objetivo.</li>
-                        </ul>
-                        <p class="opacity-70">Tudo isso por R$ 89,90 via Pix ou cartão.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="border-b border-gray-700">
-                <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
-                    onclick="toggleFaq(1)">
-                    <span class="font-anton xl:text-2xl">Quanto tempo dura o programa de treino?</span>
-                    <span id="icon-1" class="text-[#DB0030] text-xl">-</span>
-                </button>
-                <div id="faq-1" class="opacity-70 text-xs md:text-base xl:text-lg leading-relaxed">
-                    <div class="mb-4 text-justify">
-                        <p>
-                            Os treinos têm um período ideal de utilização, geralmente entre 4 a 6 semanas. Após esse
-                            tempo, é recomendável fazer mudanças para continuar evoluindo e evitar que o corpo se adapte
-                            aos estímulos, o que pode reduzir os resultados.
-                        </p>
-                        <p>
-                            O valor corresponde a um programa de treino, que será seu para sempre. No entanto, para
-                            garantir progresso contínuo, é essencial respeitar o período de renovação dos treinos e
-                            manter a constância na prática.
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="border-b border-gray-700">
-                <button class="w-full flex justify-between items-center py-2 text-left focus:outline-none"
-                    onclick="toggleFaq(2)">
-                    <span class="font-anton xl:text-2xl">Como saber qual exercício fazer?</span>
-                    <span id="icon-2" class="text-[#DB0030] text-xl">-</span>
-                </button>
-                <div id="faq-2" class="opacity-70 text-xs md:text-base xl:text-lg leading-relaxed">
-                    <p class="mb-4 text-justify">
-                        Entendo que, por ser um programa online, essa dúvida é super comum. Mas não se preocupe! Cada
-                        exercício conta com um vídeo explicativo, mostrando a execução correta e segura. O acesso é
-                        simples e intuitivo, e você conseguirá reproduzir os movimentos sem dificuldades
-                        na sua academia.
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                        Meu trabalho é voltado para atender diferentes objetivos e necessidades de cada aluno,
+                        oferecendo treinamentos específicos e personalizados.
                     </p>
+
+                    <div class="space-y-6">
+                        <!-- Feature Item -->
+                        <div class="flex gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                                <ion-icon name="barbell" class="text-2xl"></ion-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1 group-hover:text-brand-primary transition-colors">
+                                    Hipertrofia</h3>
+                                <p class="text-gray-400 text-sm">Desenvolvimento muscular através de estratégias de
+                                    treino e progressão adequadas.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                                <ion-icon name="flame" class="text-2xl"></ion-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1 group-hover:text-brand-primary transition-colors">
+                                    Emagrecimento</h3>
+                                <p class="text-gray-400 text-sm">Treinos dinâmicos para queima de gordura e melhora do
+                                    condicionamento.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                                <ion-icon name="timer" class="text-2xl"></ion-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1 group-hover:text-brand-primary transition-colors">
+                                    Resistência</h3>
+                                <p class="text-gray-400 text-sm">Aumentar a capacidade de sustentar esforços físicos
+                                    prolongados.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                                <ion-icon name="hammer" class="text-2xl"></ion-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1 group-hover:text-brand-primary transition-colors">
+                                    Força</h3>
+                                <p class="text-gray-400 text-sm">Aumentar a capacidade de levantar cargas maiores e
+                                    performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image/Cards Visual -->
+                <div class="lg:w-1/30 relative" data-aos="fade-left">
+                    <div
+                        class="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-brand-primary/20">
+                        <img src="./images/reis.webp" alt="Personal Reis"
+                            class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                            loading="lazy">
+
+                        <!-- Floating Badge -->
+                        <div
+                            class="absolute bottom-6 right-6 bg-brand-dark/90 backdrop-blur-md p-4 rounded-2xl border border-white/10 shadow-lg animate-float">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
+                                    <ion-icon name="checkmark-circle" class="text-2xl"></ion-icon>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase">Resultado</p>
+                                    <p class="font-bold text-white">Garantido</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Background Blob -->
+                    <div
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-brand-primary/10 blur-[100px] rounded-full -z-10">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="flex flex-col md:flex-row items-center justify-center my-12 xl:my-24">
-        <!-- Imagem -->
-        <div class="w-[80%] md:w-[20%] flex justify-center">
-            <img src="./images/logo.png" alt="provisoria" class="w-[70%] md:w-full max-w-[300px] object-contain">
-        </div>
-
-        <!-- Texto -->
-        <div class="w-full md:w-[30%] space-y-4 relative">
-            <!-- Background Blur -->
-            <div
-                class="absolute inset-0 mx-auto w-[80%] h-[50%] md:h-[70%] aspect-square blur-[70px] bg-[#FF2332] opacity-20 -z-10">
+    <!-- Seção de Programas de Treino (Pricing) -->
+    <section id="preço" class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-xs md:text-sm font-bold text-brand-primary uppercase tracking-widest mb-2">Investimento
+                </h2>
+                <h2 class="font-sans font-bold text-3xl md:text-4xl lg:text-5xl">Comece sua transformação</h2>
             </div>
 
-            <h1 class="text-4xl md:text-5xl font-anton uppercase text-center md:text-left">
-                Quer alcançar seus objetivos?
-            </h1>
-            <p class="opacity-70 px-6 md:px-0 text-center md:text-left xl:text-xl">
-                Me chame em minhas redes sociais. Basta apertar o botão e você será redirecionado(a)
-                para meu WhatsApp!
-            </p>
-            <div class="flex justify-center md:justify-start">
-                <button onclick="redirecionarWhatsApp()"
-                    class="bg-[#A50044] px-5 py-3 rounded-xl hover:bg-[#DB0030] transition-colors duration-300 font-bold">
-                    Junte-se ao Time!
+            <div class="max-w-md mx-auto" data-aos="zoom-in">
+                <!-- Card Premium -->
+                <div
+                    class="relative bg-brand-surface/80 backdrop-blur-xl rounded-3xl p-1 border border-white/10 hover:border-brand-primary/50 transition-all duration-500 group">
+                    <!-- Glow Effect -->
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-accent rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500">
+                    </div>
+
+                    <div class="relative bg-brand-dark rounded-[22px] p-8 md:p-12 overflow-hidden">
+                        <!-- Badge -->
+                        <div
+                            class="absolute top-0 right-0 bg-brand-primary text-white text-xs font-bold px-4 py-2 rounded-bl-2xl">
+                            MAIS POPULAR
+                        </div>
+
+                        <h3 class="text-gray-400 font-medium uppercase tracking-wider mb-4">Consultoria Online</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-bold text-white">R$ 89,90</span>
+                            <span class="text-gray-400 ml-2">/mês</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle" class="text-brand-primary text-xl"></ion-icon>
+                                <span>Acesso à comunidade exclusiva</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle" class="text-brand-primary text-xl"></ion-icon>
+                                <span>Treino 100% personalizado</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle" class="text-brand-primary text-xl"></ion-icon>
+                                <span>Suporte direto pelo WhatsApp</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle" class="text-brand-primary text-xl"></ion-icon>
+                                <span>Correção de movimentos por vídeo</span>
+                            </li>
+                        </ul>
+
+                        <button
+                            class="js-whatsapp-join w-full bg-brand-primary hover:bg-brand-accent text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg shadow-brand-primary/25 hover:shadow-brand-primary/40 hover:-translate-y-1">
+                            Quero garantir minha vaga
+                        </button>
+
+                        <p class="text-center text-xs text-gray-400 mt-4">Pagamento seguro via Pix ou Cartão</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Reviews -->
+    <section id="reviews" class="py-16 md:py-24 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[120px] -z-10">
+        </div>
+
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-xs md:text-sm font-bold text-brand-primary uppercase tracking-widest mb-2">Depoimentos
+                </h2>
+                <h2 class="font-sans font-bold text-3xl md:text-4xl lg:text-5xl">O que os alunos dizem</h2>
+            </div>
+
+            <div class="relative max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <!-- Navigation Buttons -->
+                <!-- Navigation Buttons -->
+                <button id="prev-btn"
+                    class="absolute left-2 top-1/2 -translate-y-1/2 md:-translate-x-12 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-surface border border-white/10 flex items-center justify-center text-white hover:bg-brand-primary hover:border-brand-primary transition-all duration-300 shadow-lg"
+                    aria-label="Anterior">
+                    <ion-icon name="chevron-back-outline" class="text-xl"></ion-icon>
                 </button>
+
+                <button id="next-btn"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 md:translate-x-12 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-surface border border-white/10 flex items-center justify-center text-white hover:bg-brand-primary hover:border-brand-primary transition-all duration-300 shadow-lg"
+                    aria-label="Próximo">
+                    <ion-icon name="chevron-forward-outline" class="text-xl"></ion-icon>
+                </button>
+
+                <!-- Carousel Container (Grid Stack) -->
+                <div id="carousel-container" class="grid grid-cols-1 touch-pan-y">
+
+                    <!-- Slide 1 -->
+                    <div class="slide opacity-100 transition-opacity duration-500 ease-in-out col-start-1 row-start-1 bg-brand-surface/50 backdrop-blur-md border border-white/5 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group hover:border-white/10"
+                        data-index="0">
+                        <!-- Quote Icon -->
+                        <div
+                            class="absolute top-6 left-8 text-brand-primary/20 font-serif text-8xl leading-none select-none">
+                            “</div>
+
+                        <!-- Text Content -->
+                        <div class="flex-1 relative z-10 pt-8 md:pt-0">
+                            <p
+                                class="text-lg md:text-xl text-gray-300 leading-relaxed italic mb-6 min-h-[120px] flex items-center">
+                                “Nossa disposição pro treino é algo surreal, independente de como foi o dia... Eu e o
+                                Vini já tentamos essa constância na academia juntos e separados e nuuuunca foi dessa
+                                maneira. O jeito q você faz o seu trabalho é muito foda cara.”
+                            </p>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Stephany e Vini</h4>
+                                <p class="text-brand-primary text-sm uppercase tracking-wider">Alunos Consultoria</p>
+                            </div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="w-full md:w-[300px] h-[300px] flex-shrink-0 relative">
+                            <div
+                                class="absolute inset-0 bg-brand-primary/20 rounded-2xl rotate-3 group-hover:rotate-6 transition-transform duration-500">
+                            </div>
+                            <img src="./images/stephany_vini.webp" alt="Stephany e Vini"
+                                class="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-2xl transition-all duration-500"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out col-start-1 row-start-1 bg-brand-surface/50 backdrop-blur-md border border-white/5 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group hover:border-white/10"
+                        data-index="1">
+                        <div
+                            class="absolute top-6 left-8 text-brand-primary/20 font-serif text-8xl leading-none select-none">
+                            “</div>
+                        <div class="flex-1 relative z-10 pt-8 md:pt-0">
+                            <p
+                                class="text-lg md:text-xl text-gray-300 leading-relaxed italic mb-6 min-h-[120px] flex items-center">
+                                “A minha composição corporal já mudou demaaaais, minha força, meu condicionamento, o
+                                controle da minha ansiedade... Então é isso: reconhecer as conquistas já alcançadas e
+                                buscar mais! 💪🏻💪🏻💪🏻”
+                            </p>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Amanda</h4>
+                                <p class="text-brand-primary text-sm uppercase tracking-wider">Aluna Consultoria</p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[300px] h-[300px] flex-shrink-0 relative">
+                            <div
+                                class="absolute inset-0 bg-brand-primary/20 rounded-2xl rotate-3 group-hover:rotate-6 transition-transform duration-500">
+                            </div>
+                            <img src="./images/amanda.webp" alt="Amanda"
+                                class="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-2xl transition-all duration-500"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out col-start-1 row-start-1 bg-brand-surface/50 backdrop-blur-md border border-white/5 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group hover:border-white/10"
+                        data-index="2">
+                        <div
+                            class="absolute top-6 left-8 text-brand-primary/20 font-serif text-8xl leading-none select-none">
+                            “</div>
+                        <div class="flex-1 relative z-10 pt-8 md:pt-0">
+                            <p
+                                class="text-lg md:text-xl text-gray-300 leading-relaxed italic mb-6 min-h-[120px] flex items-center">
+                                “Eu tô amando, tô até vendo um quadríceps tímido aqui. É realmente muito melhor do que
+                                treinar sozinha, só com o Personal da academia. Não via resultados também, agora eu
+                                vejo. Obrigado personal, você é o melhor!”
+                            </p>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Lorena</h4>
+                                <p class="text-brand-primary text-sm uppercase tracking-wider">Aluna Consultoria</p>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[300px] h-[300px] flex-shrink-0 relative">
+                            <div
+                                class="absolute inset-0 bg-brand-primary/20 rounded-2xl rotate-3 group-hover:rotate-6 transition-transform duration-500">
+                            </div>
+                            <img src="./images/lorena.webp" alt="Lorena"
+                                class="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-2xl transition-all duration-500"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center gap-3 mt-8">
+                    <div data-index="0"
+                        class="pagination-dot w-3 h-3 rounded-full bg-brand-primary cursor-pointer transition-all duration-300 hover:scale-125">
+                    </div>
+                    <div data-index="1"
+                        class="pagination-dot w-3 h-3 rounded-full bg-white/20 cursor-pointer transition-all duration-300 hover:scale-125 hover:bg-white/40">
+                    </div>
+                    <div data-index="2"
+                        class="pagination-dot w-3 h-3 rounded-full bg-white/20 cursor-pointer transition-all duration-300 hover:scale-125 hover:bg-white/40">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 px-24">
-        <div class="container mx-auto justify-items-center grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Seção 1: Sobre -->
-            <div>
-                <h2 class="text-lg font-bold mb-4">Personal Reis</h2>
-                <p class="hidden md:block text-sm opacity-50 mb-4 text-justify">
-                    Transforme seus treinos em algo estratégico e personalizado, deixando de lado a aleatoriedade. Com o
-                    meu
-                    acompanhamento online, você terá um planejamento completo e exclusivo, com um roteiro claro: início,
-                    meio e
-                    fim. Esqueça os treinos genéricos e alcance resultados reais com eficiência e propósito!
-                </p>
-                <p class="md:hidden text-sm opacity-50 mb-4 text-justify">Transforme seus treinos com estratégia e
-                    personalização! Com meu acompanhamento online, você terá um
-                    planejamento exclusivo, claro e eficiente, garantindo resultados reais e com propósito.
-                </p>
-                <div class="flex items-center gap-4">
-                    <!-- Ícones sociais -->
-                    <a href="https://www.instagram.com/personalreis/" aria-label="Instagram"
-                        class="opacity-50 hover:opacity-100 transition-opacity duration-300">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                    <a href="https://www.youtube.com/@personalreis" aria-label="YouTube"
-                        class="opacity-50 hover:opacity-100 transition-opacity duration-300">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                    </a>
+    <!-- Sessão FAQ -->
+    <section id="perguntas" class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-xs md:text-sm font-bold text-brand-primary uppercase tracking-widest mb-2">Dúvidas</h2>
+                <h2 class="font-sans font-bold text-3xl md:text-4xl lg:text-5xl">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                <!-- Item 1 -->
+                <div
+                    class="bg-brand-surface/50 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/10">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group"
+                        aria-expanded="true" onclick="toggleFAQ(this)">
+                        <span class="font-bold text-lg md:text-xl group-hover:text-brand-primary transition-colors">Como
+                            funciona o acompanhamento?</span>
+                        <span
+                            class="icon text-brand-primary text-2xl transition-transform duration-300 rotate-45">+</span>
+                    </button>
+                    <div class="content overflow-hidden transition-all duration-500 ease-in-out"
+                        style="max-height: 1000px; opacity: 1;">
+                        <div class="px-6 pb-6 text-gray-400 leading-relaxed">
+                            <p class="mb-3">Eu vou montar um treino personalizado para você, tudo baseado na sua
+                                resposta a
+                                esse formulário:</p>
+
+                            <a href="https://forms.gle/ou2iCFTic4XhvANE7" target="_blank" rel="noopener noreferrer"
+                                class="inline-block mb-4 uppercase font-bold text-brand-accent hover:text-brand-primary transition-colors duration-300 underline">
+                                Formulário de Trovão
+                            </a>
+
+                            <p class="mb-3 mt-4">O programa inclui:</p>
+
+                            <ul class="list-disc pl-6 mb-4 space-y-1">
+                                <li>Treinos detalhados com exercícios, séries, repetições e ordem dos movimentos.</li>
+                                <li>Acesso a vídeos explicativos de cada exercício para execução segura e eficiente.
+                                </li>
+                                <li>Suporte online para tirar dúvidas e compartilhar experiências.</li>
+                                <li>Um plano estruturado que te guia diretamente ao seu objetivo.</li>
+                            </ul>
+
+                            <p class="font-semibold text-white">Tudo isso por R$ 89,90 via Pix ou cartão.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div
+                    class="bg-brand-surface/50 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/10">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group"
+                        aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span
+                            class="font-bold text-lg md:text-xl group-hover:text-brand-primary transition-colors">Quanto
+                            tempo dura o programa?</span>
+                        <span class="icon text-brand-primary text-2xl transition-transform duration-300">+</span>
+                    </button>
+                    <div class="content overflow-hidden transition-all duration-500 ease-in-out"
+                        style="max-height: 0px; opacity: 0;">
+                        <div class="px-6 pb-6 text-gray-400 leading-relaxed">
+                            <p>O plano tem duração ideal entre 4 e 6 semanas, mas o acompanhamento é contínuo. A cada
+                                período, seu treino é atualizado com
+                                base na sua evolução e feedback. Você pode renovar ou cancelar quando quiser.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div
+                    class="bg-brand-surface/50 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/10">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group"
+                        aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span class="font-bold text-lg md:text-xl group-hover:text-brand-primary transition-colors">Como
+                            saber qual exercício fazer?</span>
+                        <span class="icon text-brand-primary text-2xl transition-transform duration-300">+</span>
+                    </button>
+                    <div class="content overflow-hidden transition-all duration-500 ease-in-out"
+                        style="max-height: 0px; opacity: 0;">
+                        <div class="px-6 pb-6 text-gray-400 leading-relaxed">
+                            <p>Todos os exercícios possuem vídeos demonstrativos no YouTube. Além disso, você pode me
+                                enviar vídeos executando os movimentos para que eu faça a correção técnica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Moderno -->
+    <footer id="contato" class="bg-brand-surface border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="./images/logo.webp" alt="Logo"
+                            class="h-10 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                            loading="lazy">
+                        <span class="font-bold text-xl">Personal Reis</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Transformando vidas através do movimento consciente e estratégico. Junte-se ao time e alcance
+                        sua melhor versão.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/personalreis/" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-primary hover:scale-110 transition-all duration-300"
+                            aria-label="Instagram">
+                            <ion-icon name="logo-instagram" class="text-xl"></ion-icon>
+                        </a>
+                        <a href="https://www.youtube.com/@personalreis" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-primary hover:scale-110 transition-all duration-300"
+                            aria-label="YouTube">
+                            <ion-icon name="logo-youtube" class="text-xl"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h3 class="font-bold text-white mb-6">Navegação</h3>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-brand-primary transition-colors">Home</a></li>
+                        <li><a href="#sobre" class="hover:text-brand-primary transition-colors">Sobre</a></li>
+                        <li><a href="#modalidades" class="hover:text-brand-primary transition-colors">Modalidades</a>
+                        </li>
+                        <li><a href="#reviews" class="hover:text-brand-primary transition-colors">Depoimentos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div>
+                    <h3 class="font-bold text-white mb-6">Contato</h3>
+                    <div class="space-y-3 text-sm text-gray-400">
+                        <p class="font-semibold text-white">Luiz Gustavo (Programador)</p>
+                        <p class="flex items-center gap-2">
+                            <ion-icon name="call-outline" class="text-brand-primary"></ion-icon>
+                            <a href="tel:+5561994149780" class="hover:text-brand-primary transition-colors">+55 (61) 9
+                                9414-9780</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <ion-icon name="mail-outline" class="text-brand-primary"></ion-icon>
+                            <a href="mailto:luizg.dev@gmail.com"
+                                class="hover:text-brand-primary transition-colors">luizg.dev@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div>
+                    <h3 class="font-bold text-white mb-6">Fale Comigo</h3>
+                    <p class="text-gray-400 text-sm mb-4">Dúvidas? Me chame no WhatsApp agora mesmo.</p>
+                    <button
+                        class="js-whatsapp-join w-full bg-white/5 hover:bg-brand-primary border border-white/10 hover:border-brand-primary text-white font-bold py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
+                        <ion-icon name="logo-whatsapp" class="text-xl"></ion-icon>
+                        <span>Conversar</span>
+                    </button>
                 </div>
             </div>
 
-            <!-- Seção 2: Links rápidos -->
-            <div>
-                <h2 class="text-lg font-bold mb-4">Links Rápidos</h2>
-                <ul class="space-y-2 text-sm">
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300" href="#home">Home</a>
-                    </li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300" href="#sobre">Sobre</a>
-                    </li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
-                            href="#modalidades">Modalidades</a></li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
-                            href="#preço">Serviços</a></li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
-                            href="#reviews">Avaliações</a></li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
-                            href="#perguntas">Perguntas Frequentes</a></li>
-                    <li><a class="opacity-50 hover:opacity-100 transition-opacity duration-300"
-                            href="#contato">Contato</a></li>
-                </ul>
+            <div class="border-t border-white/5 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2024 Personal Reis. Todos os direitos reservados.
+                </p>
             </div>
-
-            <!-- Seção 3: Contato -->
-            <div>
-                <h2 class="text-lg font-bold mb-4">Contato</h2>
-                <ul class="text-sm space-y-2">
-                    <li class="opacity-50">Luiz Gustavo (Programador)</li>
-                    <li class="cursor-pointer">+55 (61) 9 9414-9780</li>
-                    <li><a href="mailto:luizg.dev@gmail.com" class="cursor-pointer">luizg.dev@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Linha divisória -->
-        <div class="border-t border-gray-800 mt-8 pt-4 text-center text-sm opacity-50">
-            © 2025. Todos os direitos reservados.
         </div>
     </footer>
 
 
-    <script>
-        // Função para alternar o menu de navegação
-        function onToggleMenu(e) {
-            const navLinks = document.querySelector('.nav-links');
-            const headerHeight = document.querySelector('header').offsetHeight; // Calcula a altura do header
-            const isMenuOpen = e.name === 'menu';
-
-            e.name = isMenuOpen ? 'close' : 'menu';
-            navLinks.style.top = isMenuOpen ? `${headerHeight}px` : '-100%'; // Mostra/esconde o menu
-            navLinks.style.display = isMenuOpen ? 'block' : ''; // Garante que o menu apareça
-            document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto'; // Evita scroll ao abrir o menu
-        }
-
-        // Função para fechar o menu ao clicar em um link
-        function closeMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            const menuIcon = document.querySelector('ion-icon[name="close"]');
-
-            if (menuIcon) {
-                menuIcon.name = 'menu';
-                navLinks.style.top = '-100%'; // Esconde o menu
-                navLinks.style.display = 'hidden'; // Reseta o display
-                document.body.style.overflow = 'auto'; // Permite scroll
-            }
-        }
-
-        // Adiciona evento de clique aos links do menu
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-    </script>
-
-    <script>
-        const slides = [
-            {
-                image: "./images/stephany_vini.jpg",
-                text: "“Nossa disposição pro treino é algo surreal, independente de como foi o dia... Eu e o Vini já tentamos essa constância na academia juntos e separados e nuuuunca foi dessa maneira. O jeito q você faz o seu trabalho é muito foda cara.”",
-                author: "Stephany e Vini",
-            },
-            {
-                image: "./images/amanda.JPG",
-                text: "“A minha composição corporal já mudou demaaaais, minha força, meu condicionamento, o controle da minha ansiedade... Então é isso: reconhecer as conquistas já alcançadas e buscar mais! 💪🏻💪🏻💪🏻”",
-                author: "Amanda",
-            },
-            {
-                image: "./images/lorena.jpg",
-                text: "“Eu tô amando, tô até vendo um quadríceps tímido aqui. É realmente muito melhor do que treinar sozinha, só com o Personal da academia. Não via resultados também, agora eu vejo. Obrigado personal, você é o melhor!”",
-                author: "Lorena",
-            },
-        ];
-
-        let currentSlide = 0;
-        const quoteText = document.getElementById("quote-text");
-        const quoteAuthor = document.getElementById("quote-author");
-        const slideImage = document.getElementById("slide-image");
-        const paginationDots = document.querySelectorAll(".pagination-dot");
-
-        // Atualiza o conteúdo da imagem e texto
-        function updateSlide(index) {
-            const { image, text, author } = slides[index];
-            slideImage.src = image;
-            quoteText.textContent = text;
-            quoteAuthor.textContent = author;
-
-            paginationDots.forEach((dot, i) => {
-                dot.classList.toggle("bg-[#DB0030]", i === index);
-                dot.classList.toggle("bg-[#909090]", i !== index);
-            });
-        }
-
-        // Inicializa o slide com o primeiro
-        updateSlide(currentSlide);
-
-        // Navega pelos slides
-        function navigateSlide(direction) {
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
-            updateSlide(currentSlide);
-        }
-
-        // Configuração dos botões de navegação
-        document.getElementById("prev-btn").addEventListener("click", () => navigateSlide(-1));
-        document.getElementById("next-btn").addEventListener("click", () => navigateSlide(1));
-
-        // Eventos de swipe
-        let startX = 0;
-        let isDragging = false;
-
-        function startDrag(e) {
-            isDragging = true;
-            startX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
-        }
-
-        function dragMove(e) {
-            if (!isDragging) return;
-            const currentX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
-            const diff = currentX - startX;
-
-            if (diff > 50) {
-                isDragging = false;
-                navigateSlide(-1); // Arraste para a direita
-            } else if (diff < -50) {
-                isDragging = false;
-                navigateSlide(1); // Arraste para a esquerda
-            }
-        }
-
-        function endDrag() {
-            isDragging = false;
-        }
-
-        // Área de swipe para toda a seção
-        const swipeContainer = document.getElementById("swipe-container");
-        swipeContainer.addEventListener("mousedown", startDrag);
-        swipeContainer.addEventListener("mousemove", dragMove);
-        swipeContainer.addEventListener("mouseup", endDrag);
-        swipeContainer.addEventListener("mouseleave", endDrag);
-
-        swipeContainer.addEventListener("touchstart", startDrag);
-        swipeContainer.addEventListener("touchmove", dragMove);
-        swipeContainer.addEventListener("touchend", endDrag);
-
-    </script>
-
-    <script>
-        // Alternar visibilidade da FAQ
-        function toggleFaq(index) {
-            const faqContent = document.getElementById(`faq-${index}`);
-            const icon = document.getElementById(`icon-${index}`);
-
-            // Verificar se está visível
-            if (faqContent.classList.contains("hidden")) {
-                faqContent.classList.remove("hidden");
-                icon.textContent = "-"; // Altera para o ícone de menos
-            } else {
-                faqContent.classList.add("hidden");
-                icon.textContent = "+"; // Altera para o ícone de mais
-            }
-        }
-
-        // Configuração inicial ao carregar a página
-        window.onload = function () {
-            const faqs = document.querySelectorAll('[id^="faq-"]');
-            const icons = document.querySelectorAll('[id^="icon-"]');
-
-            // Configurar a primeira como aberta e as demais fechadas
-            faqs.forEach((faq, index) => {
-                if (index === 0) {
-                    faq.classList.remove("hidden"); // Mantém a primeira aberta
-                } else {
-                    faq.classList.add("hidden"); // Fecha as demais
-                }
-            });
-
-            // Ajustar os ícones correspondentes
-            icons.forEach((icon, index) => {
-                icon.textContent = index === 0 ? "-" : "+"; // Primeiro com "-" e os outros com "+"
-            });
-        };
-    </script>
-    <script>
-        function redirecionarWhatsApp() {
-            const numero = '5561998605658'; // Substitua pelo número de WhatsApp (incluindo o código do país e DDD)
-            const mensagem = 'Olá, vim do site e gostaria de fechar minha montagem dos treinos!'; // Mensagem padrão
-            const url = `whatsapp://send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;
-            window.open(url, '_blank');
-        }
-        function redirecionarWhatsApp1() {
-            const numero = '5561994149780'; // Substitua pelo número de WhatsApp (incluindo o código do país e DDD)
-            const mensagem = 'Olá, vim do site do Personal Reis e gostaria de mais informações!'; // Mensagem padrão
-            const url = `whatsapp://send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;
-            window.open(url, '_blank');
-        }
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            adjustContainerHeight();
-        });
-
-        function adjustContainerHeight() {
-            const image = document.getElementById("bannerImage");
-            const container = document.getElementById("home");
-
-            if (image.complete) {
-                container.style.height = `${image.clientHeight}px`;
-            } else {
-                image.onload = () => {
-                    container.style.height = `${image.clientHeight}px`;
-                };
-            }
-        }
-
-        // Chama a função ao carregar a página e ao redimensionar
-        window.addEventListener("load", adjustContainerHeight);
-        window.addEventListener("resize", adjustContainerHeight);
-    </script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main Script -->
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
