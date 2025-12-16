@@ -327,16 +327,16 @@
                 <h2 class="font-sans font-bold text-3xl md:text-4xl lg:text-5xl">Comece sua transformação</h2>
             </div>
 
-            <div class="max-w-md mx-auto" data-aos="zoom-in">
-                <!-- Card Premium -->
-                <div
-                    class="relative bg-brand-surface/80 backdrop-blur-xl rounded-3xl p-1 border border-white/10 hover:border-brand-primary/50 transition-all duration-500 group">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Card Consultoria Online -->
+                <div class="relative bg-brand-surface/80 backdrop-blur-xl rounded-3xl p-1 border border-white/10 hover:border-brand-primary/50 transition-all duration-500 group"
+                    data-aos="fade-up" data-aos-delay="100">
                     <!-- Glow Effect -->
                     <div
                         class="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-accent rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500">
                     </div>
 
-                    <div class="relative bg-brand-dark rounded-[22px] p-8 md:p-12 overflow-hidden">
+                    <div class="relative bg-brand-dark rounded-[22px] p-8 h-full flex flex-col overflow-hidden">
                         <!-- Badge -->
                         <div
                             class="absolute top-0 right-0 bg-brand-primary text-white text-xs font-bold px-4 py-2 rounded-bl-2xl">
@@ -361,21 +361,25 @@
                             </div>
                         </div>
 
-                        <ul class="space-y-4 mb-10">
+                        <ul class="space-y-4 mb-10 flex-grow">
                             <li class="flex items-center gap-3 text-gray-300">
-                                <ion-icon name="checkmark-circle" class="text-brand-primary text-xl"></ion-icon>
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-primary text-xl flex-shrink-0"></ion-icon>
                                 <span>Acesso à comunidade exclusiva</span>
                             </li>
                             <li class="flex items-center gap-3 text-gray-300">
-                                <ion-icon name="checkmark-circle" class="text-brand-primary text-xl"></ion-icon>
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-primary text-xl flex-shrink-0"></ion-icon>
                                 <span>Treino 100% personalizado</span>
                             </li>
                             <li class="flex items-center gap-3 text-gray-300">
-                                <ion-icon name="checkmark-circle" class="text-brand-primary text-xl"></ion-icon>
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-primary text-xl flex-shrink-0"></ion-icon>
                                 <span>Suporte direto pelo WhatsApp</span>
                             </li>
                             <li class="flex items-center gap-3 text-gray-300">
-                                <ion-icon name="checkmark-circle" class="text-brand-primary text-xl"></ion-icon>
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-primary text-xl flex-shrink-0"></ion-icon>
                                 <span>Correção de movimentos por vídeo</span>
                             </li>
                         </ul>
@@ -384,7 +388,160 @@
                             class="js-whatsapp-join w-full bg-brand-primary hover:bg-brand-accent text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg shadow-brand-primary/25 hover:shadow-brand-primary/40 hover:-translate-y-1">
                             Quero garantir minha vaga
                         </button>
+                        <p class="text-center text-xs text-gray-400 mt-4">Pagamento seguro via Pix ou Cartão</p>
+                    </div>
+                </div>
 
+                <!-- Card Presencial 2x -->
+                <div class="relative bg-brand-surface/80 backdrop-blur-xl rounded-3xl p-1 border border-white/10 hover:border-brand-blue/50 transition-all duration-500 group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-brand-blue to-blue-400 rounded-3xl blur opacity-0 group-hover:opacity-20 transition duration-500">
+                    </div>
+                    <div class="relative bg-brand-dark rounded-[22px] p-8 h-full flex flex-col overflow-hidden">
+                        <h3 class="text-gray-400 font-medium uppercase tracking-wider mb-4">Presencial 2x/Semana</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-bold text-white">R$ 399,90</span>
+                            <span class="text-gray-400 ml-2">/mês</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-10 flex-grow">
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>Acompanhamento presencial</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>Correção técnica em tempo real</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>Motivação extra no treino</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>Consultoria Online inclusa</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>20% off no plano em dupla (R$ 319,90 por aluno)</span>
+                            </li>
+                        </ul>
+
+                        <button
+                            class="js-whatsapp-join w-full bg-transparent border border-brand-blue text-white hover:bg-brand-blue font-bold py-4 rounded-xl transition-all duration-300 hover:-translate-y-1">
+                            Contratar Presencial
+                        </button>
+                        <p class="text-center text-xs text-gray-400 mt-4">Pagamento seguro via Pix ou Cartão</p>
+                    </div>
+                </div>
+
+                <!-- Card Presencial 3x -->
+                <div class="relative bg-brand-surface/80 backdrop-blur-xl rounded-3xl p-1 border border-white/10 hover:border-brand-blue/50 transition-all duration-500 group"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-brand-blue to-blue-400 rounded-3xl blur opacity-0 group-hover:opacity-20 transition duration-500">
+                    </div>
+                    <div class="relative bg-brand-dark rounded-[22px] p-8 h-full flex flex-col overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 bg-brand-blue text-white text-xs font-bold px-4 py-2 rounded-bl-2xl">
+                            RECOMENDADO
+                        </div>
+                        <h3 class="text-gray-400 font-medium uppercase tracking-wider mb-4">Presencial 3x/Semana</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-bold text-white">R$ 539,90</span>
+                            <span class="text-gray-400 ml-2">/mês</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-10 flex-grow">
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>Evolução acelerada</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>Acompanhamento presencial</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>Ajustes constantes de carga</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>Consultoria Online inclusa</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-blue text-xl flex-shrink-0"></ion-icon>
+                                <span>20% off no plano em dupla (R$ 431,90 por aluno)</span>
+                            </li>
+                        </ul>
+
+                        <button
+                            class="js-whatsapp-join w-full bg-brand-blue hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg shadow-brand-blue/25 hover:shadow-brand-blue/40 hover:-translate-y-1">
+                            Contratar Presencial
+                        </button>
+                        <p class="text-center text-xs text-gray-400 mt-4">Pagamento seguro via Pix ou Cartão</p>
+                    </div>
+                </div>
+
+                <!-- Card Presencial 5x -->
+                <div class="relative bg-brand-surface/80 backdrop-blur-xl rounded-3xl p-1 border border-white/10 hover:border-brand-yellow/50 transition-all duration-500 group"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-brand-yellow to-yellow-400 rounded-3xl blur opacity-0 group-hover:opacity-20 transition duration-500">
+                    </div>
+                    <div class="relative bg-brand-dark rounded-[22px] p-8 h-full flex flex-col overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 bg-brand-yellow text-brand-dark text-xs font-bold px-4 py-2 rounded-bl-2xl">
+                            VIP
+                        </div>
+                        <h3 class="text-gray-400 font-medium uppercase tracking-wider mb-4">Presencial 5x/Semana</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-bold text-white">R$ 799,90</span>
+                            <span class="text-gray-400 ml-2">/mês</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-10 flex-grow">
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-yellow text-xl flex-shrink-0"></ion-icon>
+                                <span>Acompanhamento diário</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-yellow text-xl flex-shrink-0"></ion-icon>
+                                <span>Máxima performance</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-yellow text-xl flex-shrink-0"></ion-icon>
+                                <span>Técnica perfeita em todos os treinos</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle" class="text-brand-yellow text-xl"></ion-icon>
+                                <span>Consultoria Online inclusa</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <ion-icon name="checkmark-circle"
+                                    class="text-brand-yellow text-xl flex-shrink-0"></ion-icon>
+                                <span>20% off no plano em dupla (R$ 639,90 por aluno)</span>
+                            </li>
+                        </ul>
+
+                        <button
+                            class="js-whatsapp-join w-full bg-brand-yellow hover:bg-yellow-400 text-brand-dark font-bold py-4 rounded-xl transition-all duration-300 shadow-lg shadow-brand-yellow/25 hover:shadow-brand-yellow/40 hover:-translate-y-1">
+                            Ser Aluno VIP
+                        </button>
                         <p class="text-center text-xs text-gray-400 mt-4">Pagamento seguro via Pix ou Cartão</p>
                     </div>
                 </div>
