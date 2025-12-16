@@ -2,48 +2,7 @@
  * Main JavaScript file for Personal Reis
  */
 
-// --- Menu Navigation ---
 
-function initMenu() {
-    const menuBtn = document.querySelector('ion-icon[name="menu"]');
-    const navLinks = document.querySelector('.nav-links');
-    const header = document.querySelector('header');
-    const links = document.querySelectorAll('.nav-links a');
-
-    if (!menuBtn || !navLinks || !header) return;
-
-    function toggleMenu() {
-        const isMenuOpen = menuBtn.getAttribute('name') === 'close';
-        const headerHeight = header.offsetHeight;
-
-        if (isMenuOpen) {
-            // Close menu
-            menuBtn.setAttribute('name', 'menu');
-            navLinks.style.top = '-100%';
-            document.body.style.overflow = 'auto';
-        } else {
-            // Open menu
-            menuBtn.setAttribute('name', 'close');
-            navLinks.style.top = `${headerHeight}px`;
-            navLinks.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-    }
-
-    function closeMenu() {
-        if (menuBtn.getAttribute('name') === 'close') {
-            menuBtn.setAttribute('name', 'menu');
-            navLinks.style.top = '-100%';
-            document.body.style.overflow = 'auto';
-        }
-    }
-
-    menuBtn.addEventListener('click', toggleMenu);
-
-    links.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-}
 
 // --- Slider / Reviews ---
 
@@ -173,22 +132,7 @@ function initFAQ() {
     };
 }
 
-// --- WhatsApp Redirection ---
 
-function initWhatsApp() {
-    const buttons = document.querySelectorAll('button');
-
-    buttons.forEach(btn => {
-        // Check if it's a whatsapp button based on text or onclick attribute (before cleanup)
-        // We will add a data-attribute or class in HTML to identify these buttons more robustly.
-        // For now, let's look for the specific function calls in the onclick or text content.
-
-        // Strategy: We will add a class .btn-whatsapp to these buttons in the HTML refactor.
-        // But since I am writing JS first, I will assume the class exists or try to match by text/onclick.
-
-        // Let's assume we will add 'js-whatsapp-join' and 'js-whatsapp-info' classes.
-    });
-}
 
 function redirectToWhatsApp(type = 'join') {
     let numero = '5561998605658';
@@ -203,36 +147,14 @@ function redirectToWhatsApp(type = 'join') {
     window.open(url, '_blank');
 }
 
-// --- Container Height Adjustment ---
 
-function initContainerHeight() {
-    const image = document.getElementById("bannerImage");
-    const container = document.getElementById("home");
-
-    if (!image || !container) return;
-
-    function adjust() {
-        if (image.complete) {
-            container.style.height = `${image.clientHeight}px`;
-        } else {
-            image.onload = () => {
-                container.style.height = `${image.clientHeight}px`;
-            };
-        }
-    }
-
-    window.addEventListener("load", adjust);
-    window.addEventListener("resize", adjust);
-    adjust(); // Call immediately in case already loaded
-}
 
 // --- Initialization ---
 
 document.addEventListener('DOMContentLoaded', () => {
-    initMenu();
+
     initSlider();
     initFAQ();
-    initContainerHeight();
 
     // Initialize AOS
     AOS.init({
@@ -243,21 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initialize WhatsApp buttons
-    // We will attach listeners to elements with specific classes
     document.querySelectorAll('.js-whatsapp-join').forEach(btn => {
         btn.addEventListener('click', () => redirectToWhatsApp('join'));
     });
-
-    // There was a second function redirecionarWhatsApp1 used? 
-    // Searching HTML... I don't see redirecionarWhatsApp1 used in the HTML provided in the view_file output.
-    // Wait, I see:
-    // 658: function redirecionarWhatsApp1() { ... }
-    // But is it called?
-    // I'll check the HTML content again.
-    // Line 57: onclick="redirecionarWhatsApp()"
-    // Line 87: onclick="redirecionarWhatsApp()"
-    // Line 242: onclick="redirecionarWhatsApp()"
-    // Line 415: onclick="redirecionarWhatsApp()"
-    // I don't see usage of redirecionarWhatsApp1 in the HTML provided.
-    // I will assume only the main one is used for now.
 });
