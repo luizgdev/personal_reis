@@ -1,0 +1,59 @@
+
+name: Deploy Agendado de Janeiro
+
+
+
+on:
+
+  schedule:
+
+    # 03:00 UTC = 00:00 Horário de Brasília (Dia 01/01)
+
+    - cron: '0 3 1 1 *'
+
+
+
+jobs:
+
+  merge-trigger:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+
+      contents: write
+
+    steps:
+
+      - name: Checkout do código
+
+        uses: actions/checkout@v4
+
+        with:
+
+          ref: main
+
+          fetch-depth: 0
+
+
+
+      - name: Configurar Git Bot
+
+        run: |
+
+          git config --global user.name 'github-actions[bot]'
+
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+
+
+      - name: Realizar o Merge
+
+        run: |
+
+          # Merge da branch com as mudanças (feature/mudanca-ano-novo) na main
+
+          git merge origin/feature/mudanca-ano-novo --no-ff -m "Merge automático: Feliz Ano Novo"
+
+          git push origin main
+
