@@ -43,6 +43,8 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body
@@ -82,7 +84,7 @@
 
             <!-- Botão CTA (visível em todas as telas) -->
             <button
-                class="js-whatsapp-join bg-brand-primary hover:bg-brand-accent hover:scale-105 text-white text-sm font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg shadow-brand-primary/25 ring-1 ring-white/10">
+                class="js-whatsapp-join bg-brand-primary hover:bg-brand-accent hover:scale-105 text-white text-sm font-bold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-lg shadow-brand-primary/25 ring-1 ring-white/10">
                 Começar Agora
             </button>
         </nav>
@@ -98,9 +100,9 @@
 
                 <h1 class="font-sans font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6"
                     data-aos="fade-up" data-aos-delay="200">
-                    Novos hábitos, <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-glow">novos
-                        resultados.</span>
+                    Seu melhor ano <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-glow">começa
+                        agora.</span>
                 </h1>
 
                 <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0 mb-10"
@@ -112,11 +114,11 @@
                 <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center md:justify-start"
                     data-aos="fade-up" data-aos-delay="400">
                     <button
-                        class="js-whatsapp-join w-full sm:w-auto bg-brand-primary hover:bg-brand-accent text-white text-base sm:text-lg font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 shadow-xl shadow-brand-primary/30 hover:shadow-brand-primary/50 hover:-translate-y-1 ring-1 ring-white/20 min-h-[48px]">
+                        class="js-whatsapp-join w-full sm:w-auto bg-brand-primary hover:bg-brand-accent text-white text-base sm:text-lg font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-300 shadow-xl shadow-brand-primary/30 hover:shadow-brand-primary/50 hover:-translate-y-1 ring-1 ring-white/20 min-h-[48px]">
                         Quero Fazer Parte do Time
                     </button>
                     <a href="#sobre"
-                        class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all duration-300 text-center font-medium min-h-[48px] flex items-center justify-center">
+                        class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all duration-300 text-center font-medium min-h-[48px] flex items-center justify-center">
                         Saiba Mais
                     </a>
                 </div>
@@ -853,6 +855,40 @@
     <script src="js/main.js" defer></script>
     <!-- Christmas Snow Effect -->
     <script src="js/snow.js"></script>
+    <!-- Custom Scripts -->
+    <script>
+        // Trigger confetti on load
+        window.addEventListener('load', () => {
+            const duration = 5 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            const random = (min, max) => Math.random() * (max - min) + min;
+
+            const interval = setInterval(() => {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 50 * (timeLeft / duration);
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: random(0.1, 0.3), y: Math.random() - 0.2 } }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: random(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+        });
+
+        // Add confetti to CTA buttons
+        document.querySelectorAll('.js-whatsapp-join').forEach(button => {
+            button.addEventListener('click', () => {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
