@@ -1,0 +1,44 @@
+name: Merge Único e Auto-Destruição
+
+on:
+  schedule:
+    # 15:00 UTC = 12:00 Horário de Brasília
+    - cron: '0 15 23 1 *'
+  
+  # Deixei o gatilho manual, caso o horário passe e você precise rodar na mão
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge-and-destroy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Configurar Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      - name: Merge da Branch
+        run: |
+          git merge origin/fix/remove-confetti --no-edit
+          # Nota: Não vamos fazer o push agora, faremos tudo junto no final
+
+      - name: Auto-Destruição do Workflow
+        run: |
+          # Remove este arquivo específico
+          # ATENÇÃO: O NOME AQUI DEVE SER EXATAMENTE O NOME DO SEU ARQUIVO
+          git rm .github/workflows/merge-jan23.yml
+          
+          # Comita a remoção
+          git commit -m "Auto-delete: Remove workflow após execução com sucesso"
+          
+          # Envia o Merge do código + a Exclusão do workflow de uma vez só
+          git push origin main
